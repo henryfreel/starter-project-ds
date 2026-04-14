@@ -937,6 +937,15 @@
   letter-spacing: -0.96px;
 }
 
+.section-divider h2 code {
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', Menlo, Consolas, monospace;
+  font-size: 0.5em;
+  font-weight: var(--weight-regular);
+  color: var(--text-secondary);
+  vertical-align: middle;
+  margin-left: var(--space-200);
+}
+
 .section-divider p {
   font-family: var(--font-sans);
   font-size: var(--text-subheading);

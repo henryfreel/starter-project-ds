@@ -4,16 +4,16 @@
 
 :root {
   /* Brand */
-  --brand-100: #f5f5f5;
-  --brand-200: #e6e6e6;
-  --brand-300: #d9d9d9;
-  --brand-400: #b3b3b3;
-  --brand-500: #757575;
-  --brand-600: #444444;
-  --brand-700: #383838;
-  --brand-800: #2c2c2c;
-  --brand-900: #1e1e1e;
-  --brand-1000: #111111;
+  --brand-100: #e5f0ff;
+  --brand-200: #cce1ff;
+  --brand-300: #a2c9ff;
+  --brand-400: #7bb2ff;
+  --brand-500: #3c8dff;
+  --brand-600: #006aff;
+  --brand-700: #005ad9;
+  --brand-800: #0046c5;
+  --brand-900: #003ba7;
+  --brand-1000: #002c7b;
 
   /* Black */
   --black-100: rgba(12, 12, 13, 0.05);
@@ -147,7 +147,7 @@
   --bg-neutral-tertiary-hover: var(--slate-300);
 
   /* Background — Brand */
-  --bg-brand: var(--brand-800);
+  --bg-brand: var(--brand-600);
   --bg-brand-hover: var(--brand-900);
   --bg-brand-secondary: var(--brand-200);
   --bg-brand-secondary-hover: var(--brand-300);
@@ -346,7 +346,7 @@
   /* Background — Brand */
   --bg-brand: var(--brand-100);
   --bg-brand-hover: var(--brand-300);
-  --bg-brand-secondary: var(--brand-600);
+  --bg-brand-secondary: var(--brand-700);
   --bg-brand-secondary-hover: var(--brand-500);
   --bg-brand-tertiary: var(--brand-600);
   --bg-brand-tertiary-hover: var(--brand-800);

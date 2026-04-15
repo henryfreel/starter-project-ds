@@ -308,6 +308,248 @@
   </section>
 
   <!-- ============================================================
+       SPACING
+       ============================================================ -->
+
+  <div class="section-divider">
+    <h2>Spacing <code>{tokens.css}</code></h2>
+    <p>Consistent spacing scale used across all components</p>
+  </div>
+  <section class="ds-page-section gap-sm">
+
+    <div class="spacing-row">
+      <span class="spacing-label">--space-050</span>
+      <div class="spacing-bar" style="width: var(--space-050);"></div>
+      <span class="spacing-value">2px</span>
+    </div>
+    <div class="spacing-row">
+      <span class="spacing-label">--space-100</span>
+      <div class="spacing-bar" style="width: var(--space-100);"></div>
+      <span class="spacing-value">4px</span>
+    </div>
+    <div class="spacing-row">
+      <span class="spacing-label">--space-150</span>
+      <div class="spacing-bar" style="width: var(--space-150);"></div>
+      <span class="spacing-value">6px</span>
+    </div>
+    <div class="spacing-row">
+      <span class="spacing-label">--space-200</span>
+      <div class="spacing-bar" style="width: var(--space-200);"></div>
+      <span class="spacing-value">8px</span>
+    </div>
+    <div class="spacing-row">
+      <span class="spacing-label">--space-300</span>
+      <div class="spacing-bar" style="width: var(--space-300);"></div>
+      <span class="spacing-value">12px</span>
+    </div>
+    <div class="spacing-row">
+      <span class="spacing-label">--space-400</span>
+      <div class="spacing-bar" style="width: var(--space-400);"></div>
+      <span class="spacing-value">16px</span>
+    </div>
+    <div class="spacing-row">
+      <span class="spacing-label">--space-600</span>
+      <div class="spacing-bar" style="width: var(--space-600);"></div>
+      <span class="spacing-value">24px</span>
+    </div>
+    <div class="spacing-row">
+      <span class="spacing-label">--space-800</span>
+      <div class="spacing-bar" style="width: var(--space-800);"></div>
+      <span class="spacing-value">32px</span>
+    </div>
+    <div class="spacing-row">
+      <span class="spacing-label">--space-1200</span>
+      <div class="spacing-bar" style="width: var(--space-1200);"></div>
+      <span class="spacing-value">48px</span>
+    </div>
+    <div class="spacing-row">
+      <span class="spacing-label">--space-1600</span>
+      <div class="spacing-bar" style="width: var(--space-1600);"></div>
+      <span class="spacing-value">64px</span>
+    </div>
+    <div class="spacing-row">
+      <span class="spacing-label">--space-2400</span>
+      <div class="spacing-bar" style="width: var(--space-2400);"></div>
+      <span class="spacing-value">96px</span>
+    </div>
+    <div class="spacing-row">
+      <span class="spacing-label">--space-4000</span>
+      <div class="spacing-bar" style="width: var(--space-4000);"></div>
+      <span class="spacing-value">160px</span>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       BORDER RADIUS
+       ============================================================ -->
+
+  <div class="section-divider">
+    <h2>Border Radius <code>{tokens.css}</code></h2>
+    <p>Corner rounding values for components</p>
+  </div>
+  <section class="ds-page-section gap-sm">
+
+    <div class="radius-row">
+      <div class="radius-item">
+        <div class="radius-box" style="border-radius: 0;"></div>
+        <div class="radius-meta">0<span>none</span></div>
+      </div>
+      <div class="radius-item">
+        <div class="radius-box" style="border-radius: var(--radius-100);"></div>
+        <div class="radius-meta">--radius-100<span>4px</span></div>
+      </div>
+      <div class="radius-item">
+        <div class="radius-box" style="border-radius: var(--radius-200);"></div>
+        <div class="radius-meta">--radius-200<span>8px</span></div>
+      </div>
+      <div class="radius-item">
+        <div class="radius-box" style="border-radius: var(--radius-400);"></div>
+        <div class="radius-meta">--radius-400<span>16px</span></div>
+      </div>
+      <div class="radius-item">
+        <div class="radius-box" style="border-radius: var(--radius-full);"></div>
+        <div class="radius-meta">--radius-full<span>9999px</span></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       STROKE
+       ============================================================ -->
+
+  <div class="section-divider">
+    <h2>Stroke <code>{tokens.css}</code></h2>
+    <p>Border and outline widths</p>
+  </div>
+  <section class="ds-page-section gap-sm">
+
+    <div class="stroke-row">
+      <div class="stroke-item">
+        <div class="stroke-line" style="height: var(--stroke-border);"></div>
+        <div class="stroke-meta">--stroke-border<span>1px</span></div>
+      </div>
+      <div class="stroke-item">
+        <div class="stroke-line" style="height: var(--stroke-focus-ring);"></div>
+        <div class="stroke-meta">--stroke-focus-ring<span>2px</span></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       DROP SHADOWS
+       ============================================================ -->
+
+  <div class="section-divider">
+    <h2>Drop Shadows <code>{tokens.css}</code></h2>
+    <p>Elevation levels for layered surfaces</p>
+  </div>
+  <section class="ds-page-section gap-sm">
+
+    <div class="shadow-row">
+      <div class="shadow-card" style="box-shadow: var(--shadow-100);">
+        <span class="shadow-card-label">100</span>
+        <span class="shadow-card-value">--shadow-100</span>
+      </div>
+      <div class="shadow-card" style="box-shadow: var(--shadow-200);">
+        <span class="shadow-card-label">200</span>
+        <span class="shadow-card-value">--shadow-200</span>
+      </div>
+      <div class="shadow-card" style="box-shadow: var(--shadow-300);">
+        <span class="shadow-card-label">300</span>
+        <span class="shadow-card-value">--shadow-300</span>
+      </div>
+      <div class="shadow-card" style="box-shadow: var(--shadow-400);">
+        <span class="shadow-card-label">400</span>
+        <span class="shadow-card-value">--shadow-400</span>
+      </div>
+      <div class="shadow-card" style="box-shadow: var(--shadow-500);">
+        <span class="shadow-card-label">500</span>
+        <span class="shadow-card-value">--shadow-500</span>
+      </div>
+      <div class="shadow-card" style="box-shadow: var(--shadow-600);">
+        <span class="shadow-card-label">600</span>
+        <span class="shadow-card-value">--shadow-600</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       INNER SHADOWS
+       ============================================================ -->
+
+  <div class="section-divider">
+    <h2>Inner Shadows <code>{tokens.css}</code></h2>
+    <p>Inset depth effects for recessed surfaces</p>
+  </div>
+  <section class="ds-page-section gap-sm">
+
+    <div class="shadow-row">
+      <div class="shadow-card" style="box-shadow: var(--inner-shadow-100);">
+        <span class="shadow-card-label">100</span>
+        <span class="shadow-card-value">--inner-shadow-100</span>
+      </div>
+      <div class="shadow-card" style="box-shadow: var(--inner-shadow-200);">
+        <span class="shadow-card-label">200</span>
+        <span class="shadow-card-value">--inner-shadow-200</span>
+      </div>
+      <div class="shadow-card" style="box-shadow: var(--inner-shadow-300);">
+        <span class="shadow-card-label">300</span>
+        <span class="shadow-card-value">--inner-shadow-300</span>
+      </div>
+      <div class="shadow-card" style="box-shadow: var(--inner-shadow-400);">
+        <span class="shadow-card-label">400</span>
+        <span class="shadow-card-value">--inner-shadow-400</span>
+      </div>
+      <div class="shadow-card" style="box-shadow: var(--inner-shadow-500);">
+        <span class="shadow-card-label">500</span>
+        <span class="shadow-card-value">--inner-shadow-500</span>
+      </div>
+      <div class="shadow-card" style="box-shadow: var(--inner-shadow-600);">
+        <span class="shadow-card-label">600</span>
+        <span class="shadow-card-value">--inner-shadow-600</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       BLUR EFFECTS
+       ============================================================ -->
+
+  <div class="section-divider">
+    <h2>Blur Effects <code>{tokens.css}</code></h2>
+    <p>Background and layer blur for overlays and glass surfaces</p>
+  </div>
+  <section class="ds-page-section gap-sm">
+
+    <div class="blur-row">
+      <div class="blur-item">
+        <div class="blur-demo">
+          <div class="blur-demo-overlay" style="backdrop-filter: var(--blur-overlay);"></div>
+        </div>
+        <div class="blur-meta">--blur-overlay<span>backdrop-filter: blur(4px)</span></div>
+      </div>
+      <div class="blur-item">
+        <div class="blur-demo">
+          <div class="blur-demo-overlay" style="filter: var(--blur-layer);"></div>
+        </div>
+        <div class="blur-meta">--blur-layer<span>filter: blur(4px)</span></div>
+      </div>
+      <div class="blur-item">
+        <div class="blur-demo">
+          <div class="blur-demo-overlay" style="backdrop-filter: var(--blur-glass);"></div>
+        </div>
+        <div class="blur-meta">--blur-glass<span>backdrop-filter: blur(4px)</span></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
        HERO SECTIONS
        ============================================================ -->
 

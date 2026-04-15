@@ -395,7 +395,10 @@
 
 :root {
   /* Spacing */
+  --space-0: 0px;
+  --space-050: 2px;
   --space-100: 4px;
+  --space-150: 6px;
   --space-200: 8px;
   --space-300: 12px;
   --space-400: 16px;
@@ -403,14 +406,44 @@
   --space-800: 32px;
   --space-1200: 48px;
   --space-1600: 64px;
+  --space-2400: 96px;
   --space-4000: 160px;
 
   /* Border Radius */
+  --radius-100: 4px;
   --radius-200: 8px;
+  --radius-400: 16px;
   --radius-full: 9999px;
 
   /* Stroke */
   --stroke-border: 1px;
+  --stroke-focus-ring: 2px;
+
+  /* Icon Sizes */
+  --icon-size-sm: 24px;
+  --icon-size-md: 32px;
+  --icon-size-lg: 40px;
+
+  /* Drop Shadows */
+  --shadow-100: 0 1px 4px rgba(12, 12, 13, 0.05);
+  --shadow-200: 0 1px 4px rgba(12, 12, 13, 0.05), 0 1px 4px rgba(12, 12, 13, 0.1);
+  --shadow-300: 0 4px 4px -1px rgba(12, 12, 13, 0.05), 0 4px 4px -1px rgba(12, 12, 13, 0.1);
+  --shadow-400: 0 4px 4px -4px rgba(12, 12, 13, 0.05), 0 16px 32px -4px rgba(12, 12, 13, 0.1);
+  --shadow-500: 0 4px 4px -4px rgba(12, 12, 13, 0.05), 0 16px 16px -8px rgba(12, 12, 13, 0.1);
+  --shadow-600: 0 16px 32px -8px rgba(12, 12, 13, 0.4);
+
+  /* Inner Shadows */
+  --inner-shadow-100: inset 0 1px 4px rgba(12, 12, 13, 0.05);
+  --inner-shadow-200: inset 0 1px 4px rgba(12, 12, 13, 0.05);
+  --inner-shadow-300: inset 0 4px 4px -1px rgba(12, 12, 13, 0.05);
+  --inner-shadow-400: inset 0 16px 32px -4px rgba(12, 12, 13, 0.1);
+  --inner-shadow-500: inset 0 16px 16px -8px rgba(12, 12, 13, 0.1);
+  --inner-shadow-600: inset 0 16px 32px -8px rgba(12, 12, 13, 0.4);
+
+  /* Blur */
+  --blur-overlay: blur(4px);
+  --blur-layer: blur(4px);
+  --blur-glass: blur(4px);
 
   /* Typography — Font Family */
   --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,

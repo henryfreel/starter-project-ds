@@ -1936,6 +1936,298 @@
   </section>
 
   <!-- ============================================================
+       EXAMPLES — Full-page compositions using shared components
+       ============================================================ -->
+
+  <div class="section-divider">
+    <h2>Examples</h2>
+    <p>Full-page compositions built entirely from shared design system components</p>
+  </div>
+
+  <!-- Page Newsletter -->
+  <div class="section-divider">
+    <h2 style="font-size: var(--text-body); font-weight: var(--weight-semibold);">Page Newsletter</h2>
+  </div>
+  <section class="ds-page-section gap-sm">
+    <div class="example-section">
+      <section class="ds-page-section gap-sm" style="padding: var(--space-1200) var(--space-800);">
+        <div class="text-content-heading">
+          <h2 class="heading">Follow the latest trends</h2>
+          <p class="subheading">With our daily newsletter</p>
+        </div>
+        <form class="form-newsletter" onsubmit="return false;">
+          <div class="input-field">
+            <input class="input" type="email" placeholder="you@example.com">
+          </div>
+          <button class="btn btn-brand" type="submit">Submit</button>
+        </form>
+      </section>
+    </div>
+  </section>
+
+  <!-- Page Product -->
+  <div class="section-divider">
+    <h2 style="font-size: var(--text-body); font-weight: var(--weight-semibold);">Page Product</h2>
+  </div>
+  <section class="ds-page-section gap-sm">
+    <div class="example-section">
+      <div class="example-product-page">
+        <div class="example-product-image">
+          <div class="image-placeholder" style="width: 100%; height: 100%;"></div>
+          <button class="btn-icon btn-brand" style="position: absolute; top: var(--space-300); left: var(--space-300);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div class="example-product-details">
+          <h2 style="font-size: var(--text-heading-3); font-weight: var(--weight-bold); color: var(--text-default);">Wireless Headphones</h2>
+          <span class="tag" style="align-self: flex-start;">New Arrival</span>
+          <div class="text-price"><span class="currency">$</span><span class="amount">50</span></div>
+          <p style="font-size: var(--text-body); color: var(--text-secondary); line-height: 1.5;">Premium wireless headphones with active noise cancellation and 30-hour battery life.</p>
+          <div class="example-product-selects">
+            <div class="select-field">
+              <label class="select-field-label">Color</label>
+              <select>
+                <option>Midnight Black</option>
+                <option>Silver</option>
+                <option>Navy Blue</option>
+              </select>
+            </div>
+            <div class="select-field">
+              <label class="select-field-label">Size</label>
+              <select>
+                <option>Standard</option>
+                <option>Compact</option>
+              </select>
+            </div>
+          </div>
+          <button class="btn btn-brand" style="width: 100%;">Add to Cart</button>
+          <div class="ds-accordion">
+            <div class="accordion-item open">
+              <button class="accordion-title">
+                Frequently Asked Questions
+                <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="accordion-content">
+                <p>Answer the frequently asked question in a simple sentence, a longish paragraph, or even in a list.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page Product Results -->
+  <div class="section-divider">
+    <h2 style="font-size: var(--text-body); font-weight: var(--weight-semibold);">Page Product Results</h2>
+  </div>
+  <section class="ds-page-section gap-sm">
+    <div class="example-section">
+      <div class="example-product-results">
+        <aside class="example-filters">
+          <div class="example-filter-group">
+            <span class="example-filter-title">Keywords</span>
+            <div style="display: flex; flex-wrap: wrap; gap: var(--space-200);">
+              <span class="tag">Spring <button class="tag-dismiss" aria-label="Dismiss">&times;</button></span>
+              <span class="tag">Smart <button class="tag-dismiss" aria-label="Dismiss">&times;</button></span>
+              <span class="tag">Modern <button class="tag-dismiss" aria-label="Dismiss">&times;</button></span>
+            </div>
+          </div>
+          <div class="example-filter-group">
+            <div class="checkbox-group">
+              <label class="checkbox-field">
+                <input type="checkbox" checked>
+                <div class="checkbox-row">
+                  <span class="checkbox-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  <span class="checkbox-label">Electronics</span>
+                </div>
+                <span class="checkbox-description">Description</span>
+              </label>
+              <label class="checkbox-field">
+                <input type="checkbox" checked>
+                <div class="checkbox-row">
+                  <span class="checkbox-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  <span class="checkbox-label">Clothing</span>
+                </div>
+                <span class="checkbox-description">Description</span>
+              </label>
+              <label class="checkbox-field">
+                <input type="checkbox" checked>
+                <div class="checkbox-row">
+                  <span class="checkbox-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  <span class="checkbox-label">Home</span>
+                </div>
+                <span class="checkbox-description">Description</span>
+              </label>
+            </div>
+          </div>
+          <div class="example-filter-group">
+            <div class="slider-field">
+              <div class="slider-field-header">
+                <span class="slider-field-label">Price</span>
+                <span class="slider-field-output">$0-100</span>
+              </div>
+              <input type="range" min="0" max="100" value="50">
+            </div>
+          </div>
+          <div class="example-filter-group">
+            <span class="example-filter-title">Color</span>
+            <div class="checkbox-group">
+              <label class="checkbox-field">
+                <input type="checkbox" checked>
+                <div class="checkbox-row">
+                  <span class="checkbox-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  <span class="checkbox-label">Black</span>
+                </div>
+              </label>
+              <label class="checkbox-field">
+                <input type="checkbox" checked>
+                <div class="checkbox-row">
+                  <span class="checkbox-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  <span class="checkbox-label">White</span>
+                </div>
+              </label>
+              <label class="checkbox-field">
+                <input type="checkbox" checked>
+                <div class="checkbox-row">
+                  <span class="checkbox-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  <span class="checkbox-label">Blue</span>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="example-filter-group">
+            <span class="example-filter-title">Size</span>
+            <div class="checkbox-group">
+              <label class="checkbox-field">
+                <input type="checkbox" checked>
+                <div class="checkbox-row">
+                  <span class="checkbox-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  <span class="checkbox-label">Small</span>
+                </div>
+              </label>
+              <label class="checkbox-field">
+                <input type="checkbox" checked>
+                <div class="checkbox-row">
+                  <span class="checkbox-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  <span class="checkbox-label">Medium</span>
+                </div>
+              </label>
+              <label class="checkbox-field">
+                <input type="checkbox" checked>
+                <div class="checkbox-row">
+                  <span class="checkbox-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  <span class="checkbox-label">Large</span>
+                </div>
+              </label>
+            </div>
+          </div>
+        </aside>
+        <div class="example-results-main">
+          <div class="example-results-toolbar">
+            <div class="search-input" style="max-width: 200px;">
+              <input type="text" placeholder="Search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+            <div class="tag-toggle-group" style="margin-left: auto;">
+              <button class="tag-toggle on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>New</button>
+              <button class="tag-toggle off">Price ascending</button>
+              <button class="tag-toggle off">Price descending</button>
+              <button class="tag-toggle off">Rating</button>
+            </div>
+          </div>
+          <div class="example-results-grid">
+            <div class="product-card"><div class="product-card-image"></div><div class="product-card-body"><span class="product-card-title">Wireless Speaker</span><span class="product-card-price">$45</span></div></div>
+            <div class="product-card"><div class="product-card-image"></div><div class="product-card-body"><span class="product-card-title">Smart Watch</span><span class="product-card-price">$120</span></div></div>
+            <div class="product-card"><div class="product-card-image"></div><div class="product-card-body"><span class="product-card-title">Running Shoes</span><span class="product-card-price">$89</span></div></div>
+            <div class="product-card"><div class="product-card-image"></div><div class="product-card-body"><span class="product-card-title">Desk Lamp</span><span class="product-card-price">$35</span></div></div>
+            <div class="product-card"><div class="product-card-image"></div><div class="product-card-body"><span class="product-card-title">Backpack</span><span class="product-card-price">$65</span></div></div>
+            <div class="product-card"><div class="product-card-image"></div><div class="product-card-body"><span class="product-card-title">Sunglasses</span><span class="product-card-price">$55</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Chatbot -->
+  <div class="section-divider">
+    <h2 style="font-size: var(--text-body); font-weight: var(--weight-semibold);">AI Chatbot</h2>
+  </div>
+  <section class="ds-page-section gap-sm">
+    <div class="example-section">
+      <div class="example-chat">
+        <div class="example-chat-sidebar">
+          <div class="example-chat-sidebar-header">
+            <span>Flippy chats</span>
+            <button class="btn-icon btn-subtle btn-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+          </div>
+          <div style="padding: var(--space-300) var(--space-400);">
+            <div class="search-input">
+              <input type="text" placeholder="Search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+          </div>
+          <div class="example-chat-sidebar-section">Chats</div>
+          <div class="example-chat-sidebar-item active">Analog Clock React app</div>
+          <div class="example-chat-sidebar-item">Simple Design System</div>
+          <div class="example-chat-sidebar-item">Figma variable planning</div>
+          <div class="example-chat-sidebar-item">OKCLH token algorithm</div>
+          <div class="example-chat-sidebar-item">Component naming advice</div>
+        </div>
+        <div class="example-chat-main">
+          <div class="example-chat-messages">
+            <div class="chat-bubble-user">Hey Flippy! Write me a script for building an Analog Clock.</div>
+            <div class="chat-bubble-ai">
+              <div class="chat-bubble-ai-avatar">F</div>
+              <div class="chat-bubble-ai-content">
+                <p>Sure. Here is a Typescript code block for your Analog Clock project. It is built using React, and uses the local time for London, England as standard. Let me know if you would like to make any refinements to the code.</p>
+                <div class="chat-code-block">import React, { useState, useEffect } from "react";
+
+export default function AnalogClock({
+  updateInterval = 1000,
+  secondHandColor = "red",
+  minuteHandColor = "black",
+  hourHandColor = "black",
+}) {
+  const [time, setTime] = useState({
+    hours: 0, minutes: 0, seconds: 0
+  });
+
+  useEffect(() =&gt; {
+    const updateClock = () =&gt; {
+      const now = new Date();
+      setTime({
+        hours: now.getHours(),
+        minutes: now.getMinutes(),
+        seconds: now.getSeconds()
+      });
+    };
+    updateClock();
+    const id = setInterval(updateClock, updateInterval);
+    return () =&gt; clearInterval(id);
+  }, [updateInterval]);
+}</div>
+              </div>
+            </div>
+          </div>
+          <div class="example-chat-input">
+            <input type="text" placeholder="What would you like to know?">
+            <div class="example-chat-input-actions">
+              <button class="btn-icon btn-subtle btn-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></button>
+              <button class="btn-icon btn-subtle btn-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></button>
+              <button class="btn-icon btn-subtle btn-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></button>
+            </div>
+          </div>
+          <div class="example-chat-footer">
+            <div class="chat-bubble-ai-avatar" style="width: 20px; height: 20px; font-size: 10px;">F</div>
+            <span>flippy@figma.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
        FOOTER
        ============================================================ -->
 

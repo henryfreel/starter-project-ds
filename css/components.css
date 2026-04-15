@@ -2423,6 +2423,376 @@ body.overlay-open {
 }
 
 /* ========================================
+   Slider Field
+   ======================================== */
+
+.slider-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-300);
+  font-family: var(--font-sans);
+  width: 100%;
+}
+
+.slider-field-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.slider-field-label {
+  font-size: var(--text-body);
+  color: var(--text-default);
+}
+
+.slider-field-output {
+  font-size: var(--text-body-small);
+  color: var(--text-default);
+}
+
+.slider-field input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 9999px;
+  background: var(--bg-brand-secondary);
+  outline: none;
+}
+
+.slider-field input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: var(--bg-brand);
+  cursor: pointer;
+  border: none;
+}
+
+.slider-field input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: var(--bg-brand);
+  cursor: pointer;
+  border: none;
+}
+
+.slider-field.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ========================================
+   Product Info Card
+   ======================================== */
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-400);
+  padding: var(--space-400);
+  background: var(--bg-default);
+  border: var(--stroke-border) solid var(--border-default);
+  border-radius: var(--radius-200);
+  font-family: var(--font-sans);
+  width: 100%;
+}
+
+.product-card-image {
+  width: 100%;
+  aspect-ratio: 208 / 247;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-100);
+}
+
+.product-card-title {
+  font-size: var(--text-body);
+  font-weight: var(--weight-regular);
+  color: var(--text-default);
+}
+
+.product-card-price {
+  font-size: var(--text-body);
+  font-weight: var(--weight-semibold);
+  color: var(--text-default);
+}
+
+.product-card-description {
+  font-size: var(--text-body-small);
+  color: var(--text-secondary);
+}
+
+/* ========================================
+   Example Compositions (non-shared)
+   ======================================== */
+
+.example-section {
+  width: 100%;
+  max-width: var(--device-width);
+  border: var(--stroke-border) solid var(--border-default);
+  border-radius: var(--radius-200);
+  overflow: hidden;
+  background: var(--bg-default);
+}
+
+.example-product-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-800);
+  padding: var(--space-800);
+}
+
+.example-product-image {
+  width: 100%;
+  aspect-ratio: 1;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.example-product-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-400);
+}
+
+.example-product-selects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-400);
+}
+
+.example-product-results {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: var(--space-600);
+  padding: var(--space-600);
+}
+
+.example-filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-600);
+}
+
+.example-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-300);
+}
+
+.example-filter-title {
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  font-weight: var(--weight-semibold);
+  color: var(--text-default);
+}
+
+.example-results-main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-600);
+}
+
+.example-results-toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-400);
+}
+
+.example-results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-400);
+}
+
+.example-chat {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  height: 600px;
+  overflow: hidden;
+}
+
+.example-chat-sidebar {
+  display: flex;
+  flex-direction: column;
+  border-right: var(--stroke-border) solid var(--border-default);
+  background: var(--bg-default);
+  overflow-y: auto;
+}
+
+.example-chat-sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-400);
+  border-bottom: var(--stroke-border) solid var(--border-default);
+  font-family: var(--font-sans);
+  font-weight: var(--weight-semibold);
+  color: var(--text-default);
+}
+
+.example-chat-sidebar-section {
+  padding: var(--space-400);
+  font-family: var(--font-sans);
+  font-size: var(--text-body-small);
+  font-weight: var(--weight-semibold);
+  color: var(--text-secondary);
+}
+
+.example-chat-sidebar-item {
+  padding: var(--space-200) var(--space-400);
+  font-family: var(--font-sans);
+  font-size: var(--text-body-small);
+  color: var(--text-default);
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+}
+
+.example-chat-sidebar-item:hover,
+.example-chat-sidebar-item.active {
+  background: var(--bg-default-hover);
+}
+
+.example-chat-main {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-default);
+}
+
+.example-chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-600);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-600);
+}
+
+.chat-bubble-user {
+  align-self: flex-end;
+  max-width: 70%;
+  padding: var(--space-300) var(--space-400);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-200);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  color: var(--text-default);
+}
+
+.chat-bubble-ai {
+  display: flex;
+  gap: var(--space-300);
+  max-width: 85%;
+}
+
+.chat-bubble-ai-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  background: var(--bg-brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--text-on-brand);
+  font-size: 12px;
+  font-weight: var(--weight-bold);
+}
+
+.chat-bubble-ai-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-300);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: 1.6;
+  color: var(--text-default);
+}
+
+.chat-code-block {
+  background: var(--bg-default-tertiary);
+  border-radius: var(--radius-200);
+  padding: var(--space-400);
+  font-family: var(--font-mono);
+  font-size: var(--text-body-small);
+  line-height: 1.5;
+  color: var(--text-default);
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.example-chat-input {
+  display: flex;
+  align-items: center;
+  gap: var(--space-300);
+  padding: var(--space-400) var(--space-600);
+  border-top: var(--stroke-border) solid var(--border-default);
+}
+
+.example-chat-input input {
+  flex: 1;
+  border: var(--stroke-border) solid var(--border-default);
+  border-radius: var(--radius-200);
+  padding: var(--space-300) var(--space-400);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  color: var(--text-default);
+  background: var(--bg-default);
+  outline: none;
+}
+
+.example-chat-input input::placeholder {
+  color: var(--text-tertiary);
+}
+
+.example-chat-input-actions {
+  display: flex;
+  gap: var(--space-200);
+}
+
+.example-chat-footer {
+  padding: var(--space-300) var(--space-600);
+  border-top: var(--stroke-border) solid var(--border-default);
+  display: flex;
+  align-items: center;
+  gap: var(--space-200);
+  font-family: var(--font-sans);
+  font-size: var(--text-body-small);
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .example-product-page { grid-template-columns: 1fr; }
+  .example-product-results { grid-template-columns: 1fr; }
+  .example-results-grid { grid-template-columns: repeat(2, 1fr); }
+  .example-chat { grid-template-columns: 1fr; height: auto; }
+  .example-chat-sidebar { display: none; }
+}
+
+/* ========================================
    Color Tokens
    ======================================== */
 

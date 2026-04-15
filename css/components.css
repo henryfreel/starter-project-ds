@@ -1,4 +1,12 @@
 /* ========================================
+   Body Scroll Lock
+   ======================================== */
+
+body.overlay-open {
+  overflow: hidden;
+}
+
+/* ========================================
    Theme Toggle
    ======================================== */
 
@@ -1552,7 +1560,7 @@
   display: flex;
   align-items: stretch;
   justify-content: flex-end;
-  background: var(--bg-scrim);
+  background: transparent;
   z-index: 1100;
   opacity: 0;
   visibility: hidden;

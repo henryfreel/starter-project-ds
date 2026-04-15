@@ -50,6 +50,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Overlay scroll lock helpers
+  function openOverlay(el) {
+    el.classList.add('open');
+    document.body.classList.add('overlay-open');
+  }
+
+  function closeOverlay(el) {
+    el.classList.remove('open');
+    if (!document.querySelector('.dialog-overlay.open, .modal-overlay.open, .blade-overlay.open')) {
+      document.body.classList.remove('overlay-open');
+    }
+  }
+
   // Dialog
   const dialogOverlay = document.getElementById('demo-dialog');
   const openBtn = document.getElementById('open-dialog');
@@ -60,10 +73,10 @@ document.addEventListener('DOMContentLoaded', () => {
   ].filter(Boolean);
 
   if (openBtn && dialogOverlay) {
-    openBtn.addEventListener('click', () => dialogOverlay.classList.add('open'));
-    closeBtns.forEach(btn => btn.addEventListener('click', () => dialogOverlay.classList.remove('open')));
+    openBtn.addEventListener('click', () => openOverlay(dialogOverlay));
+    closeBtns.forEach(btn => btn.addEventListener('click', () => closeOverlay(dialogOverlay)));
     dialogOverlay.addEventListener('click', (e) => {
-      if (e.target === dialogOverlay) dialogOverlay.classList.remove('open');
+      if (e.target === dialogOverlay) closeOverlay(dialogOverlay);
     });
   }
 
@@ -77,10 +90,10 @@ document.addEventListener('DOMContentLoaded', () => {
   ].filter(Boolean);
 
   if (openModalBtn && modalOverlay) {
-    openModalBtn.addEventListener('click', () => modalOverlay.classList.add('open'));
-    closeModalBtns.forEach(btn => btn.addEventListener('click', () => modalOverlay.classList.remove('open')));
+    openModalBtn.addEventListener('click', () => openOverlay(modalOverlay));
+    closeModalBtns.forEach(btn => btn.addEventListener('click', () => closeOverlay(modalOverlay)));
     modalOverlay.addEventListener('click', (e) => {
-      if (e.target === modalOverlay) modalOverlay.classList.remove('open');
+      if (e.target === modalOverlay) closeOverlay(modalOverlay);
     });
   }
 
@@ -92,10 +105,10 @@ document.addEventListener('DOMContentLoaded', () => {
   ].filter(Boolean);
 
   if (openBladeBtn && bladeOverlay) {
-    openBladeBtn.addEventListener('click', () => bladeOverlay.classList.add('open'));
-    closeBladeBtns.forEach(btn => btn.addEventListener('click', () => bladeOverlay.classList.remove('open')));
+    openBladeBtn.addEventListener('click', () => openOverlay(bladeOverlay));
+    closeBladeBtns.forEach(btn => btn.addEventListener('click', () => closeOverlay(bladeOverlay)));
     bladeOverlay.addEventListener('click', (e) => {
-      if (e.target === bladeOverlay) bladeOverlay.classList.remove('open');
+      if (e.target === bladeOverlay) closeOverlay(bladeOverlay);
     });
   }
 

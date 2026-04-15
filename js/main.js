@@ -135,4 +135,29 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  // Tag toggles
+  document.querySelectorAll('.tag-toggle').forEach(tag => {
+    tag.addEventListener('click', () => {
+      const wasOn = tag.classList.contains('on');
+      tag.classList.toggle('on', !wasOn);
+      tag.classList.toggle('off', wasOn);
+      const check = tag.querySelector('svg');
+      if (wasOn && check) {
+        check.remove();
+      } else if (!wasOn && !check) {
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        svg.setAttribute('viewBox', '0 0 24 24');
+        svg.setAttribute('fill', 'none');
+        svg.setAttribute('stroke', 'currentColor');
+        svg.setAttribute('stroke-width', '2');
+        svg.setAttribute('stroke-linecap', 'round');
+        svg.setAttribute('stroke-linejoin', 'round');
+        const polyline = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+        polyline.setAttribute('points', '20 6 9 17 4 12');
+        svg.appendChild(polyline);
+        tag.prepend(svg);
+      }
+    });
+  });
 });

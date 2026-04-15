@@ -1871,6 +1871,581 @@ body.overlay-open {
 }
 
 /* ========================================
+   Checkbox Field
+   ======================================== */
+
+.checkbox-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  font-family: var(--font-sans);
+  cursor: pointer;
+}
+
+.checkbox-field input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-300);
+}
+
+.checkbox-box {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: var(--stroke-border) solid var(--border-default);
+  background: var(--bg-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.checkbox-field input:checked + .checkbox-row .checkbox-box {
+  background: var(--bg-brand);
+  border-color: var(--border-brand);
+}
+
+.checkbox-box svg {
+  display: none;
+  width: 12px;
+  height: 12px;
+  stroke: var(--icon-on-brand);
+}
+
+.checkbox-field input:checked + .checkbox-row .checkbox-box svg {
+  display: block;
+}
+
+.checkbox-label {
+  font-size: var(--text-body);
+  font-weight: var(--weight-regular);
+  color: var(--text-default);
+  line-height: 1.4;
+}
+
+.checkbox-description {
+  padding-left: 28px;
+  font-size: var(--text-body);
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.checkbox-field.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.checkbox-field.indeterminate .checkbox-box {
+  background: var(--bg-brand);
+  border-color: var(--border-brand);
+}
+
+.checkbox-field.indeterminate .checkbox-box svg {
+  display: block;
+}
+
+/* ========================================
+   Radio Field
+   ======================================== */
+
+.radio-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  font-family: var(--font-sans);
+  cursor: pointer;
+}
+
+.radio-field input[type="radio"] {
+  display: none;
+}
+
+.radio-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-300);
+}
+
+.radio-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  border: var(--stroke-border) solid var(--border-default);
+  background: var(--bg-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color 0.15s ease;
+}
+
+.radio-dot::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: var(--bg-brand);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.radio-field input:checked + .radio-row .radio-dot {
+  border-color: var(--border-brand);
+}
+
+.radio-field input:checked + .radio-row .radio-dot::after {
+  opacity: 1;
+}
+
+.radio-label {
+  font-size: var(--text-body);
+  font-weight: var(--weight-regular);
+  color: var(--text-default);
+  line-height: 1.4;
+}
+
+.radio-description {
+  padding-left: 28px;
+  font-size: var(--text-body);
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.radio-field.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-300);
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-300);
+}
+
+/* ========================================
+   Select Field
+   ======================================== */
+
+.select-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-200);
+  font-family: var(--font-sans);
+  width: 100%;
+}
+
+.select-field-label {
+  font-size: var(--text-body);
+  font-weight: var(--weight-regular);
+  color: var(--text-default);
+  line-height: 1.4;
+}
+
+.select-field-description {
+  font-size: var(--text-body);
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.select-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  padding: var(--space-300) var(--space-400);
+  padding-right: var(--space-800);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  color: var(--text-default);
+  background-color: var(--bg-default);
+  border: var(--stroke-border) solid var(--border-default);
+  border-radius: var(--radius-200);
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23757575' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  transition: border-color 0.15s ease;
+}
+
+.select-field select:focus {
+  outline: none;
+  border-color: var(--border-brand);
+}
+
+.select-field select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.select-field.error select {
+  border-color: var(--border-danger);
+}
+
+.select-field-error {
+  font-size: var(--text-body-small);
+  color: var(--text-danger);
+  line-height: 1.4;
+}
+
+.select-field select option {
+  font-size: var(--text-body);
+}
+
+/* ========================================
+   Switch Field
+   ======================================== */
+
+.switch-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  font-family: var(--font-sans);
+  cursor: pointer;
+}
+
+.switch-field input[type="checkbox"] {
+  display: none;
+}
+
+.switch-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-300);
+}
+
+.switch-track {
+  width: 40px;
+  height: 24px;
+  border-radius: 9999px;
+  background: var(--bg-default-tertiary);
+  border: var(--stroke-border) solid var(--border-default);
+  position: relative;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.switch-knob {
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: var(--icon-on-brand);
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  box-shadow: var(--shadow-drop-1);
+}
+
+.switch-field input:checked + .switch-row .switch-track {
+  background: var(--bg-brand);
+  border-color: var(--border-brand);
+}
+
+.switch-field input:checked + .switch-row .switch-knob {
+  transform: translateX(16px);
+}
+
+.switch-label {
+  font-size: var(--text-body);
+  font-weight: var(--weight-regular);
+  color: var(--text-default);
+  line-height: 1.4;
+}
+
+.switch-description {
+  font-size: var(--text-body);
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.switch-field.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ========================================
+   Search Input
+   ======================================== */
+
+.search-input {
+  display: flex;
+  align-items: center;
+  gap: var(--space-200);
+  padding: var(--space-300) var(--space-400);
+  background: var(--bg-default);
+  border: var(--stroke-border) solid var(--border-default);
+  border-radius: 9999px;
+  font-family: var(--font-sans);
+  width: 100%;
+  transition: border-color 0.15s ease;
+}
+
+.search-input:focus-within {
+  border-color: var(--border-brand);
+}
+
+.search-input input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  color: var(--text-default);
+  width: 100%;
+}
+
+.search-input input::placeholder {
+  color: var(--text-tertiary);
+}
+
+.search-input svg {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  stroke: var(--icon-default);
+}
+
+.search-input.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ========================================
+   Icon Button
+   ======================================== */
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--stroke-border) solid transparent;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+  padding: var(--space-300);
+  line-height: 0;
+}
+
+.btn-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-icon.btn-sm {
+  padding: var(--space-200);
+}
+
+.btn-icon.btn-sm svg {
+  width: 16px;
+  height: 16px;
+}
+
+.btn-icon.btn-brand {
+  background: var(--bg-brand);
+  border-color: var(--border-brand);
+  color: var(--text-on-brand);
+}
+
+.btn-icon.btn-brand:hover {
+  background: var(--bg-brand-hover);
+}
+
+.btn-icon.btn-neutral {
+  background: var(--bg-default);
+  border-color: var(--border-default);
+  color: var(--text-default);
+}
+
+.btn-icon.btn-neutral:hover {
+  background: var(--bg-default-hover);
+}
+
+.btn-icon.btn-subtle {
+  background: transparent;
+  border-color: transparent;
+  color: var(--text-default);
+}
+
+.btn-icon.btn-subtle:hover {
+  background: var(--bg-default-hover);
+}
+
+.btn-icon.disabled,
+.btn-icon:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ========================================
+   Menu
+   ======================================== */
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-default);
+  border: var(--stroke-border) solid var(--border-default);
+  border-radius: var(--radius-200);
+  padding: var(--space-200);
+  min-width: 200px;
+  box-shadow: var(--shadow-drop-3);
+  font-family: var(--font-sans);
+}
+
+.menu-heading {
+  padding: var(--space-200) var(--space-300);
+  font-size: var(--text-body-small);
+  font-weight: var(--weight-semibold);
+  color: var(--text-secondary);
+}
+
+.menu-separator {
+  height: 1px;
+  background: var(--border-default);
+  margin: var(--space-200) 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-300);
+  padding: var(--space-200) var(--space-300);
+  border-radius: var(--radius-100);
+  cursor: pointer;
+  font-size: var(--text-body);
+  color: var(--text-default);
+  text-decoration: none;
+  transition: background-color 0.1s ease;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+}
+
+.menu-item:hover {
+  background: var(--bg-default-hover);
+}
+
+.menu-item svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--icon-default);
+  flex-shrink: 0;
+}
+
+.menu-item .menu-shortcut {
+  margin-left: auto;
+  font-size: var(--text-body-small);
+  color: var(--text-tertiary);
+}
+
+.menu-item.danger {
+  color: var(--text-danger);
+}
+
+.menu-item.danger svg {
+  stroke: var(--text-danger);
+}
+
+.menu-item.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ========================================
+   Tag Toggle
+   ======================================== */
+
+.tag-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-200);
+  padding: var(--space-200);
+  border-radius: var(--radius-200);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  font-weight: var(--weight-regular);
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.tag-toggle.on {
+  background: var(--bg-brand);
+  color: var(--text-on-brand);
+}
+
+.tag-toggle.off {
+  background: var(--bg-brand-tertiary);
+  color: var(--text-default);
+}
+
+.tag-toggle.on svg {
+  stroke: var(--text-on-brand);
+}
+
+.tag-toggle svg {
+  width: 16px;
+  height: 16px;
+}
+
+.tag-toggle:hover {
+  opacity: 0.85;
+}
+
+.tag-toggle-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-200);
+}
+
+/* ========================================
+   Avatar Block
+   ======================================== */
+
+.avatar-block {
+  display: flex;
+  align-items: center;
+  gap: var(--space-300);
+  font-family: var(--font-sans);
+}
+
+.avatar-block .avatar {
+  flex-shrink: 0;
+}
+
+.avatar-block-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.avatar-block-title {
+  font-size: var(--text-body);
+  font-weight: var(--weight-semibold);
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.avatar-block-description {
+  font-size: var(--text-body);
+  font-weight: var(--weight-regular);
+  color: var(--text-tertiary);
+  line-height: 1.4;
+}
+
+/* ========================================
    Color Tokens
    ======================================== */
 

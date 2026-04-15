@@ -1589,7 +1589,7 @@
 .spacing-bar {
   height: 24px;
   border-radius: 2px;
-  background-color: var(--bg-brand);
+  background-color: var(--bg-measurement);
   flex-shrink: 0;
   min-width: 2px;
 }
@@ -1630,7 +1630,7 @@
 .radius-box {
   width: 80px;
   height: 80px;
-  background-color: var(--bg-brand);
+  background-color: var(--bg-measurement);
 }
 
 .radius-meta {
@@ -1702,7 +1702,7 @@
 
 .stroke-line {
   width: 120px;
-  background-color: var(--text-default);
+  background-color: var(--bg-measurement);
 }
 
 .stroke-meta {

@@ -963,6 +963,16 @@ body.overlay-open {
   margin-top: var(--space-200);
 }
 
+.variant-label {
+  width: 100%;
+  max-width: var(--device-width);
+  padding: var(--space-300) var(--space-800);
+  font-family: var(--font-mono);
+  font-size: var(--text-body-small);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
 /* ========================================
    Buttons — showcase variants
    ======================================== */

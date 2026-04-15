@@ -913,16 +913,16 @@ body.overlay-open {
 .ds-page-section {
   display: flex;
   flex-direction: column;
-  gap: var(--space-1200);
+  gap: var(--space-800);
   align-items: center;
-  padding: var(--space-1600);
+  padding: var(--space-800);
   background-color: var(--bg-default);
   width: 100%;
   max-width: var(--device-width);
 }
 
 .ds-page-section.gap-sm {
-  gap: var(--space-600);
+  gap: var(--space-400);
 }
 
 /* ========================================
@@ -932,7 +932,7 @@ body.overlay-open {
 .section-divider {
   width: 100%;
   max-width: var(--device-width);
-  padding: var(--space-800) var(--space-1600);
+  padding: var(--space-600) var(--space-800);
   border-bottom: var(--stroke-border) solid var(--border-default);
 }
 

@@ -1,84 +1,400 @@
 :root,
 [data-theme="light"] {
-  /* ========================================
-     Colors — Background (Light)
-     ======================================== */
+  /* Background — Default */
   --bg-default: #ffffff;
+  --bg-default-hover: #f5f5f5;
   --bg-secondary: #f5f5f5;
-  --bg-brand: #2c2c2c;
-  --bg-brand-tertiary: #f5f5f5;
-  --bg-neutral-tertiary: #e3e3e3;
-  --bg-scrim: rgba(255, 255, 255, 0.8);
+  --bg-secondary-hover: #e6e6e6;
+  --bg-default-tertiary: #d9d9d9;
+  --bg-default-tertiary-hover: #b3b3b3;
 
-  /* ========================================
-     Colors — Text (Light)
-     ======================================== */
+  /* Background — Neutral */
+  --bg-neutral: #5a5a5a;
+  --bg-neutral-hover: #434343;
+  --bg-neutral-secondary: #cdcdcd;
+  --bg-neutral-secondary-hover: #b2b2b2;
+  --bg-neutral-tertiary: #e3e3e3;
+  --bg-neutral-tertiary-hover: #cdcdcd;
+
+  /* Background — Brand */
+  --bg-brand: #2c2c2c;
+  --bg-brand-hover: #1e1e1e;
+  --bg-brand-secondary: #e6e6e6;
+  --bg-brand-secondary-hover: #d9d9d9;
+  --bg-brand-tertiary: #f5f5f5;
+  --bg-brand-tertiary-hover: #e6e6e6;
+
+  /* Background — Positive */
+  --bg-positive: #14ae5c;
+  --bg-positive-hover: #009951;
+  --bg-positive-secondary: #cff7d3;
+  --bg-positive-secondary-hover: #aff4c6;
+  --bg-positive-tertiary: #ebffee;
+  --bg-positive-tertiary-hover: #cff7d3;
+
+  /* Background — Warning */
+  --bg-warning: #e8b931;
+  --bg-warning-hover: #e5a000;
+  --bg-warning-secondary: #fff1c2;
+  --bg-warning-secondary-hover: #ffe8a3;
+  --bg-warning-tertiary: #fffbeb;
+  --bg-warning-tertiary-hover: #fff1c2;
+
+  /* Background — Danger */
+  --bg-danger: #ec221f;
+  --bg-danger-hover: #c00f0c;
+  --bg-danger-secondary: #fdd3d0;
+  --bg-danger-secondary-hover: #fcb3ad;
+  --bg-danger-tertiary: #fee9e7;
+  --bg-danger-tertiary-hover: #fdd3d0;
+
+  /* Background — Disabled & Utilities */
+  --bg-disabled: #d9d9d9;
+  --bg-scrim: rgba(255, 255, 255, 0.8);
+  --bg-blanket: rgba(0, 0, 0, 0.7);
+  --bg-overlay: rgba(0, 0, 0, 0.5);
+  --bg-measurement: #fae1fa;
+
+  /* Text — Default */
   --text-default: #1e1e1e;
   --text-secondary: #757575;
   --text-tertiary: #b3b3b3;
+
+  /* Text — Neutral */
+  --text-neutral: #303030;
+  --text-neutral-secondary: #5a5a5a;
+  --text-neutral-tertiary: #767676;
+  --text-on-neutral: #f3f3f3;
+  --text-on-neutral-secondary: #303030;
+  --text-on-neutral-tertiary: #434343;
+
+  /* Text — Brand */
+  --text-brand: #2c2c2c;
+  --text-brand-secondary: #444444;
+  --text-brand-tertiary: #757575;
   --text-on-brand: #f5f5f5;
   --text-on-brand-secondary: #1e1e1e;
+  --text-on-brand-tertiary: #2c2c2c;
 
-  /* ========================================
-     Colors — Border (Light)
-     ======================================== */
+  /* Text — Positive */
+  --text-positive: #02542d;
+  --text-positive-secondary: #009951;
+  --text-positive-tertiary: #14ae5c;
+  --text-on-positive: #ebffee;
+  --text-on-positive-secondary: #02542d;
+  --text-on-positive-tertiary: #02542d;
+
+  /* Text — Warning */
+  --text-warning: #522504;
+  --text-warning-secondary: #975102;
+  --text-warning-tertiary: #bf6a02;
+  --text-on-warning: #401b01;
+  --text-on-warning-secondary: #682d03;
+  --text-on-warning-tertiary: #522504;
+
+  /* Text — Danger */
+  --text-danger: #900b09;
+  --text-danger-secondary: #c00f0c;
+  --text-danger-tertiary: #ec221f;
+  --text-on-danger: #fee9e7;
+  --text-on-danger-secondary: #900b09;
+  --text-on-danger-tertiary: #900b09;
+
+  /* Text — Disabled & Utilities */
+  --text-disabled: #b3b3b3;
+  --text-on-disabled: #b3b3b3;
+  --text-on-overlay: #0c0c0d;
+  --text-on-measurement: #8a226f;
+
+  /* Border — Default */
   --border-default: #d9d9d9;
+  --border-default-secondary: #757575;
+  --border-default-tertiary: #383838;
+
+  /* Border — Neutral */
+  --border-neutral: #303030;
+  --border-neutral-secondary: #767676;
+  --border-neutral-tertiary: #b2b2b2;
+
+  /* Border — Brand */
   --border-brand: #2c2c2c;
-  --border-neutral: #767676;
+  --border-brand-secondary: #444444;
+  --border-brand-tertiary: #757575;
 
-  /* ========================================
-     Colors — Icon (Light)
-     ======================================== */
+  /* Border — Positive */
+  --border-positive: #02542d;
+  --border-positive-secondary: #009951;
+  --border-positive-tertiary: #14ae5c;
+
+  /* Border — Warning */
+  --border-warning: #522504;
+  --border-warning-secondary: #975102;
+  --border-warning-tertiary: #bf6a02;
+
+  /* Border — Danger */
+  --border-danger: #900b09;
+  --border-danger-secondary: #c00f0c;
+  --border-danger-tertiary: #ec221f;
+
+  /* Border — Disabled & Utilities */
+  --border-disabled: #b3b3b3;
+  --border-measurement: #f19edc;
+  --border-swatch: rgba(0, 0, 0, 0.24);
+
+  /* Icon — Default */
   --icon-default: #1e1e1e;
+  --icon-secondary: #757575;
+  --icon-tertiary: #b3b3b3;
 
-  /* ========================================
-     Colors — Misc (Light)
-     ======================================== */
+  /* Icon — Neutral */
+  --icon-neutral: #303030;
+  --icon-neutral-secondary: #5a5a5a;
+  --icon-neutral-tertiary: #767676;
+  --icon-on-neutral: #f3f3f3;
+  --icon-on-neutral-secondary: #303030;
+  --icon-on-neutral-tertiary: #434343;
+
+  /* Icon — Brand */
+  --icon-brand: #2c2c2c;
+  --icon-brand-secondary: #444444;
+  --icon-brand-tertiary: #757575;
+  --icon-on-brand: #f5f5f5;
+  --icon-on-brand-secondary: #1e1e1e;
+  --icon-on-brand-tertiary: #2c2c2c;
+
+  /* Icon — Positive */
+  --icon-positive: #02542d;
+  --icon-positive-secondary: #009951;
+  --icon-positive-tertiary: #14ae5c;
+  --icon-on-positive: #ebffee;
+  --icon-on-positive-secondary: #02542d;
+  --icon-on-positive-tertiary: #024023;
+
+  /* Icon — Warning */
+  --icon-warning: #522504;
+  --icon-warning-secondary: #975102;
+  --icon-warning-tertiary: #bf6a02;
+  --icon-on-warning: #401b01;
+  --icon-on-warning-secondary: #682d03;
+  --icon-on-warning-tertiary: #522504;
+
+  /* Icon — Danger */
+  --icon-danger: #900b09;
+  --icon-danger-secondary: #c00f0c;
+  --icon-danger-tertiary: #ec221f;
+  --icon-on-danger: #fee9e7;
+  --icon-on-danger-secondary: #900b09;
+  --icon-on-danger-tertiary: #900b09;
+
+  /* Icon — Disabled & Utilities */
+  --icon-disabled: #b3b3b3;
+  --icon-on-disabled: #b3b3b3;
+  --icon-utility: #d732a8;
+  --icon-on-measurement: #8a226f;
+
+  /* Misc */
   --color-placeholder: #e3e3e3;
 }
 
 [data-theme="dark"] {
-  /* ========================================
-     Colors — Background (Dark)
-     ======================================== */
+  /* Background — Default */
   --bg-default: #1e1e1e;
+  --bg-default-hover: #383838;
   --bg-secondary: #2c2c2c;
-  --bg-brand: #f5f5f5;
-  --bg-brand-tertiary: #444444;
-  --bg-neutral-tertiary: #303030;
-  --bg-scrim: rgba(0, 0, 0, 0.8);
+  --bg-secondary-hover: #1e1e1e;
+  --bg-default-tertiary: #444444;
+  --bg-default-tertiary-hover: #383838;
 
-  /* ========================================
-     Colors — Text (Dark)
-     ======================================== */
+  /* Background — Neutral */
+  --bg-neutral: #b2b2b2;
+  --bg-neutral-hover: #949494;
+  --bg-neutral-secondary: #303030;
+  --bg-neutral-secondary-hover: #242424;
+  --bg-neutral-tertiary: #303030;
+  --bg-neutral-tertiary-hover: #242424;
+
+  /* Background — Brand */
+  --bg-brand: #f5f5f5;
+  --bg-brand-hover: #d9d9d9;
+  --bg-brand-secondary: #444444;
+  --bg-brand-secondary-hover: #757575;
+  --bg-brand-tertiary: #444444;
+  --bg-brand-tertiary-hover: #2c2c2c;
+
+  /* Background — Positive */
+  --bg-positive: #008043;
+  --bg-positive-hover: #02542d;
+  --bg-positive-secondary: #02542d;
+  --bg-positive-secondary-hover: #024023;
+  --bg-positive-tertiary: #024023;
+  --bg-positive-tertiary-hover: #062d1b;
+
+  /* Background — Warning */
+  --bg-warning: #e8b931;
+  --bg-warning-hover: #e5a000;
+  --bg-warning-secondary: #682d03;
+  --bg-warning-secondary-hover: #522504;
+  --bg-warning-tertiary: #522504;
+  --bg-warning-tertiary-hover: #401b01;
+
+  /* Background — Danger */
+  --bg-danger: #c00f0c;
+  --bg-danger-hover: #900b09;
+  --bg-danger-secondary: #690807;
+  --bg-danger-secondary-hover: #4d0b0a;
+  --bg-danger-tertiary: #4d0b0a;
+  --bg-danger-tertiary-hover: #300603;
+
+  /* Background — Disabled & Utilities */
+  --bg-disabled: #383838;
+  --bg-scrim: rgba(0, 0, 0, 0.8);
+  --bg-blanket: rgba(0, 0, 0, 0.7);
+  --bg-overlay: rgba(0, 0, 0, 0.5);
+  --bg-measurement: #8a226f;
+
+  /* Text — Default */
   --text-default: #ffffff;
   --text-secondary: rgba(255, 255, 255, 0.7);
   --text-tertiary: rgba(255, 255, 255, 0.4);
+
+  /* Text — Neutral */
+  --text-neutral: #e3e3e3;
+  --text-neutral-secondary: #cdcdcd;
+  --text-neutral-tertiary: #b2b2b2;
+  --text-on-neutral: #242424;
+  --text-on-neutral-secondary: #f3f3f3;
+  --text-on-neutral-tertiary: #f3f3f3;
+
+  /* Text — Brand */
+  --text-brand: #f5f5f5;
+  --text-brand-secondary: #d9d9d9;
+  --text-brand-tertiary: #b3b3b3;
   --text-on-brand: #1e1e1e;
   --text-on-brand-secondary: #f5f5f5;
+  --text-on-brand-tertiary: #f5f5f5;
 
-  /* ========================================
-     Colors — Border (Dark)
-     ======================================== */
+  /* Text — Positive */
+  --text-positive: #cff7d3;
+  --text-positive-secondary: #85e0a3;
+  --text-positive-tertiary: #009951;
+  --text-on-positive: #ebffee;
+  --text-on-positive-secondary: #ebffee;
+  --text-on-positive-tertiary: #ebffee;
+
+  /* Text — Warning */
+  --text-warning: #fff1c2;
+  --text-warning-secondary: #e8b931;
+  --text-warning-tertiary: #bf6a02;
+  --text-on-warning: #401b01;
+  --text-on-warning-secondary: #fffbeb;
+  --text-on-warning-tertiary: #fffbeb;
+
+  /* Text — Danger */
+  --text-danger: #fdd3d0;
+  --text-danger-secondary: #f4776a;
+  --text-danger-tertiary: #ec221f;
+  --text-on-danger: #fee9e7;
+  --text-on-danger-secondary: #fee9e7;
+  --text-on-danger-tertiary: #fee9e7;
+
+  /* Text — Disabled & Utilities */
+  --text-disabled: #757575;
+  --text-on-disabled: #b3b3b3;
+  --text-on-overlay: #ffffff;
+  --text-on-measurement: #fae1fa;
+
+  /* Border — Default */
   --border-default: #444444;
+  --border-default-secondary: #757575;
+  --border-default-tertiary: #b3b3b3;
+
+  /* Border — Neutral */
+  --border-neutral: #f3f3f3;
+  --border-neutral-secondary: #949494;
+  --border-neutral-tertiary: #767676;
+
+  /* Border — Brand */
   --border-brand: #f5f5f5;
-  --border-neutral: #949494;
+  --border-brand-secondary: #d9d9d9;
+  --border-brand-tertiary: #b3b3b3;
 
-  /* ========================================
-     Colors — Icon (Dark)
-     ======================================== */
+  /* Border — Positive */
+  --border-positive: #cff7d3;
+  --border-positive-secondary: #85e0a3;
+  --border-positive-tertiary: #009951;
+
+  /* Border — Warning */
+  --border-warning: #fff1c2;
+  --border-warning-secondary: #e8b931;
+  --border-warning-tertiary: #bf6a02;
+
+  /* Border — Danger */
+  --border-danger: #fdd3d0;
+  --border-danger-secondary: #f4776a;
+  --border-danger-tertiary: #ec221f;
+
+  /* Border — Disabled & Utilities */
+  --border-disabled: #444444;
+  --border-measurement: #d732a8;
+  --border-swatch: rgba(255, 255, 255, 0.24);
+
+  /* Icon — Default */
   --icon-default: #ffffff;
+  --icon-secondary: rgba(255, 255, 255, 0.7);
+  --icon-tertiary: rgba(255, 255, 255, 0.4);
 
-  /* ========================================
-     Colors — Misc (Dark)
-     ======================================== */
+  /* Icon — Neutral */
+  --icon-neutral: #e3e3e3;
+  --icon-neutral-secondary: #cdcdcd;
+  --icon-neutral-tertiary: #b2b2b2;
+  --icon-on-neutral: #242424;
+  --icon-on-neutral-secondary: #f3f3f3;
+  --icon-on-neutral-tertiary: #f3f3f3;
+
+  /* Icon — Brand */
+  --icon-brand: #f5f5f5;
+  --icon-brand-secondary: #d9d9d9;
+  --icon-brand-tertiary: #b3b3b3;
+  --icon-on-brand: #1e1e1e;
+  --icon-on-brand-secondary: #f5f5f5;
+  --icon-on-brand-tertiary: #f5f5f5;
+
+  /* Icon — Positive */
+  --icon-positive: #cff7d3;
+  --icon-positive-secondary: #85e0a3;
+  --icon-positive-tertiary: #009951;
+  --icon-on-positive: #ebffee;
+  --icon-on-positive-secondary: #ebffee;
+  --icon-on-positive-tertiary: #ebffee;
+
+  /* Icon — Warning */
+  --icon-warning: #fff1c2;
+  --icon-warning-secondary: #e8b931;
+  --icon-warning-tertiary: #bf6a02;
+  --icon-on-warning: #401b01;
+  --icon-on-warning-secondary: #fffbeb;
+  --icon-on-warning-tertiary: #fffbeb;
+
+  /* Icon — Danger */
+  --icon-danger: #fdd3d0;
+  --icon-danger-secondary: #f4776a;
+  --icon-danger-tertiary: #ec221f;
+  --icon-on-danger: #fee9e7;
+  --icon-on-danger-secondary: #fee9e7;
+  --icon-on-danger-tertiary: #fee9e7;
+
+  /* Icon — Disabled & Utilities */
+  --icon-disabled: #757575;
+  --icon-on-disabled: #b3b3b3;
+  --icon-utility: #f19edc;
+  --icon-on-measurement: #fae1fa;
+
+  /* Misc */
   --color-placeholder: #303030;
 }
 
 :root {
-  /* ========================================
-     Spacing
-     ======================================== */
+  /* Spacing */
   --space-100: 4px;
   --space-200: 8px;
   --space-300: 12px;
@@ -89,26 +405,19 @@
   --space-1600: 64px;
   --space-4000: 160px;
 
-  /* ========================================
-     Border Radius
-     ======================================== */
+  /* Border Radius */
   --radius-200: 8px;
   --radius-full: 9999px;
 
-  /* ========================================
-     Stroke
-     ======================================== */
+  /* Stroke */
   --stroke-border: 1px;
 
-  /* ========================================
-     Typography — Font Family
-     ======================================== */
+  /* Typography — Font Family */
   --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Roboto Mono', 'SF Mono', 'Fira Code', Menlo, Consolas, monospace;
 
-  /* ========================================
-     Typography — Sizes
-     ======================================== */
+  /* Typography — Sizes */
   --text-title-hero: 72px;
   --text-title-page: 48px;
   --text-subtitle: 32px;
@@ -118,22 +427,17 @@
   --text-body: 16px;
   --text-body-small: 14px;
 
-  /* ========================================
-     Typography — Weights
-     ======================================== */
+  /* Typography — Weights */
   --weight-regular: 400;
   --weight-semibold: 600;
   --weight-bold: 700;
 
-  /* ========================================
-     Typography — Line Heights
-     ======================================== */
+  /* Typography — Line Heights */
   --leading-tight: 1.2;
   --leading-normal: 1.4;
   --leading-none: 1;
+  --leading-code: 1.3;
 
-  /* ========================================
-     Layout
-     ======================================== */
+  /* Layout */
   --device-width: 1200px;
 }

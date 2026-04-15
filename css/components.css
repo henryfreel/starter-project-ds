@@ -1681,6 +1681,120 @@ body.overlay-open {
 }
 
 /* ========================================
+   List Row
+   ======================================== */
+
+.list-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-400) 0;
+  background-color: var(--bg-default);
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-radius 0.15s ease, box-shadow 0.15s ease;
+}
+
+.list-row:hover {
+  background-color: var(--bg-default-hover);
+  border-radius: 6px;
+  box-shadow:
+    8px 0 0 0 var(--bg-default-hover),
+    -8px 0 0 0 var(--bg-default-hover);
+}
+
+.list-row-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-400);
+  min-width: 0;
+}
+
+.list-row-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: var(--radius-200);
+  background-color: var(--bg-default-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.list-row-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--icon-default);
+}
+
+.list-row-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.list-row-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.list-row-header {
+  font-size: var(--text-body);
+  font-weight: var(--weight-semibold);
+  line-height: 1.4;
+  color: var(--text-default);
+}
+
+.list-row-subtitle {
+  font-size: var(--text-body-small);
+  font-weight: var(--weight-regular);
+  line-height: 1.4;
+  color: var(--text-secondary);
+}
+
+.list-row-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-300);
+  flex-shrink: 0;
+}
+
+.list-row-right-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  white-space: nowrap;
+}
+
+.list-row-right-primary {
+  font-size: var(--text-body);
+  font-weight: var(--weight-semibold);
+  line-height: 1.4;
+  color: var(--text-default);
+}
+
+.list-row-right-secondary {
+  font-size: var(--text-body-small);
+  font-weight: var(--weight-regular);
+  line-height: 1.4;
+  color: var(--text-secondary);
+}
+
+.list-row-chevron {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--icon-tertiary);
+}
+
+.list-row + .list-row {
+  border-top: var(--stroke-border) solid var(--border-default);
+}
+
+/* ========================================
    Color Tokens
    ======================================== */
 

@@ -1156,6 +1156,181 @@
   </div>
 
   <div class="section-divider">
+    <h2>List Row <code>{.list-row}</code></h2>
+    <p>Flexible row component for lists, with optional icon, subtitle, right content, and chevron</p>
+  </div>
+  <section class="ds-page-section gap-sm" style="max-width: 480px;">
+
+    <h3 style="font-size: var(--text-body-small); color: var(--text-secondary); font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.05em;">Full (icon + subtitle + right text + chevron)</h3>
+    <div>
+      <div class="list-row">
+        <div class="list-row-left">
+          <div class="list-row-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#activity"/></svg>
+          </div>
+          <div class="list-row-text">
+            <span class="list-row-header">Recent Activity</span>
+            <span class="list-row-subtitle">3 new transactions</span>
+          </div>
+        </div>
+        <div class="list-row-right">
+          <div class="list-row-right-text">
+            <span class="list-row-right-primary">$1,240.00</span>
+            <span class="list-row-right-secondary">+$80.00</span>
+          </div>
+          <svg class="list-row-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#chevron-right"/></svg>
+        </div>
+      </div>
+      <div class="list-row">
+        <div class="list-row-left">
+          <div class="list-row-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#credit-card"/></svg>
+          </div>
+          <div class="list-row-text">
+            <span class="list-row-header">Payment Method</span>
+            <span class="list-row-subtitle">Visa ending in 4242</span>
+          </div>
+        </div>
+        <div class="list-row-right">
+          <div class="list-row-right-text">
+            <span class="list-row-right-primary">$0.00</span>
+            <span class="list-row-right-secondary">No balance</span>
+          </div>
+          <svg class="list-row-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#chevron-right"/></svg>
+        </div>
+      </div>
+      <div class="list-row">
+        <div class="list-row-left">
+          <div class="list-row-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#settings"/></svg>
+          </div>
+          <div class="list-row-text">
+            <span class="list-row-header">Account Settings</span>
+            <span class="list-row-subtitle">Manage preferences</span>
+          </div>
+        </div>
+        <div class="list-row-right">
+          <div class="list-row-right-text">
+            <span class="list-row-right-primary">Active</span>
+            <span class="list-row-right-secondary">Since Jan 2024</span>
+          </div>
+          <svg class="list-row-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#chevron-right"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-size: var(--text-body-small); color: var(--text-secondary); font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.05em; margin-top: var(--space-800);">Header only (no icon, no subtitle, no right content)</h3>
+    <div>
+      <div class="list-row">
+        <div class="list-row-left">
+          <div class="list-row-text">
+            <span class="list-row-header">Privacy Policy</span>
+          </div>
+        </div>
+      </div>
+      <div class="list-row">
+        <div class="list-row-left">
+          <div class="list-row-text">
+            <span class="list-row-header">Terms of Service</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-size: var(--text-body-small); color: var(--text-secondary); font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.05em; margin-top: var(--space-800);">With icon, no right content</h3>
+    <div>
+      <div class="list-row">
+        <div class="list-row-left">
+          <div class="list-row-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#user"/></svg>
+          </div>
+          <div class="list-row-text">
+            <span class="list-row-header">Profile</span>
+            <span class="list-row-subtitle">Edit your personal info</span>
+          </div>
+        </div>
+      </div>
+      <div class="list-row">
+        <div class="list-row-left">
+          <div class="list-row-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#bell"/></svg>
+          </div>
+          <div class="list-row-text">
+            <span class="list-row-header">Notifications</span>
+            <span class="list-row-subtitle">Manage alert preferences</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-size: var(--text-body-small); color: var(--text-secondary); font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.05em; margin-top: var(--space-800);">No icon, with right text and chevron</h3>
+    <div>
+      <div class="list-row">
+        <div class="list-row-left">
+          <div class="list-row-text">
+            <span class="list-row-header">Subscription</span>
+            <span class="list-row-subtitle">Monthly plan</span>
+          </div>
+        </div>
+        <div class="list-row-right">
+          <div class="list-row-right-text">
+            <span class="list-row-right-primary">$9.99/mo</span>
+          </div>
+          <svg class="list-row-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#chevron-right"/></svg>
+        </div>
+      </div>
+      <div class="list-row">
+        <div class="list-row-left">
+          <div class="list-row-text">
+            <span class="list-row-header">Storage</span>
+            <span class="list-row-subtitle">Cloud backup</span>
+          </div>
+        </div>
+        <div class="list-row-right">
+          <div class="list-row-right-text">
+            <span class="list-row-right-primary">24 GB</span>
+            <span class="list-row-right-secondary">of 50 GB</span>
+          </div>
+          <svg class="list-row-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#chevron-right"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-size: var(--text-body-small); color: var(--text-secondary); font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.05em; margin-top: var(--space-800);">With image avatar</h3>
+    <div>
+      <div class="list-row">
+        <div class="list-row-left">
+          <div class="list-row-icon">
+            <img src="https://i.pravatar.cc/80?img=12" alt="Avatar">
+          </div>
+          <div class="list-row-text">
+            <span class="list-row-header">Sarah Connor</span>
+            <span class="list-row-subtitle">Online</span>
+          </div>
+        </div>
+        <div class="list-row-right">
+          <svg class="list-row-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#chevron-right"/></svg>
+        </div>
+      </div>
+      <div class="list-row">
+        <div class="list-row-left">
+          <div class="list-row-icon">
+            <img src="https://i.pravatar.cc/80?img=33" alt="Avatar">
+          </div>
+          <div class="list-row-text">
+            <span class="list-row-header">John Doe</span>
+            <span class="list-row-subtitle">Away</span>
+          </div>
+        </div>
+        <div class="list-row-right">
+          <svg class="list-row-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#chevron-right"/></svg>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="section-divider">
     <h2>Pagination <code>{.pagination}</code></h2>
     <p>Page navigation controls</p>
   </div>

@@ -1146,7 +1146,7 @@
   </div>
   <section class="ds-page-section gap-sm list-row-section" style="max-width: 800px;">
 
-    <h3 style="font-size: var(--text-body-small); color: var(--text-secondary); font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.05em;">Full (icon + subtitle + right text + chevron)</h3>
+    <p class="variant-label">.list-row-icon — Avatar variant (icon in 40px rounded box)</p>
     <div class="list-row-container">
       <div class="list-row">
         <div class="list-row-left">
@@ -1184,27 +1184,67 @@
           <svg class="list-row-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#chevron-right"/></svg>
         </div>
       </div>
+    </div>
+
+    <p class="variant-label" style="margin-top: var(--space-600);">.list-row-icon.icon-only — Icon variant (raw 24px icon, no box)</p>
+    <div class="list-row-container">
       <div class="list-row">
         <div class="list-row-left">
-          <div class="list-row-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#settings"/></svg>
+          <div class="list-row-icon icon-only">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#user"/></svg>
           </div>
           <div class="list-row-text">
-            <span class="list-row-header">Account Settings</span>
-            <span class="list-row-subtitle">Manage preferences</span>
+            <span class="list-row-header">Profile</span>
+            <span class="list-row-subtitle">Edit your personal info</span>
+          </div>
+        </div>
+      </div>
+      <div class="list-row">
+        <div class="list-row-left">
+          <div class="list-row-icon icon-only">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#bell"/></svg>
+          </div>
+          <div class="list-row-text">
+            <span class="list-row-header">Notifications</span>
+            <span class="list-row-subtitle">Manage alert preferences</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="variant-label" style="margin-top: var(--space-600);">.list-row-icon.image — Image variant (40px rounded image)</p>
+    <div class="list-row-container">
+      <div class="list-row">
+        <div class="list-row-left">
+          <div class="list-row-icon image">
+            <img src="https://i.pravatar.cc/80?img=12" alt="Avatar">
+          </div>
+          <div class="list-row-text">
+            <span class="list-row-header">Sarah Connor</span>
+            <span class="list-row-subtitle">Online</span>
           </div>
         </div>
         <div class="list-row-right">
-          <div class="list-row-right-text">
-            <span class="list-row-right-primary">Active</span>
-            <span class="list-row-right-secondary">Since Jan 2024</span>
+          <svg class="list-row-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#chevron-right"/></svg>
+        </div>
+      </div>
+      <div class="list-row">
+        <div class="list-row-left">
+          <div class="list-row-icon image">
+            <img src="https://i.pravatar.cc/80?img=33" alt="Avatar">
           </div>
+          <div class="list-row-text">
+            <span class="list-row-header">John Doe</span>
+            <span class="list-row-subtitle">Away</span>
+          </div>
+        </div>
+        <div class="list-row-right">
           <svg class="list-row-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#chevron-right"/></svg>
         </div>
       </div>
     </div>
 
-    <h3 style="font-size: var(--text-body-small); color: var(--text-secondary); font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.05em; margin-top: var(--space-600);">Header only (no icon, no subtitle, no right content)</h3>
+    <p class="variant-label" style="margin-top: var(--space-600);">.list-row — no icon, header only</p>
     <div class="list-row-container">
       <div class="list-row">
         <div class="list-row-left">
@@ -1222,33 +1262,7 @@
       </div>
     </div>
 
-    <h3 style="font-size: var(--text-body-small); color: var(--text-secondary); font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.05em; margin-top: var(--space-600);">With icon, no right content</h3>
-    <div class="list-row-container">
-      <div class="list-row">
-        <div class="list-row-left">
-          <div class="list-row-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#user"/></svg>
-          </div>
-          <div class="list-row-text">
-            <span class="list-row-header">Profile</span>
-            <span class="list-row-subtitle">Edit your personal info</span>
-          </div>
-        </div>
-      </div>
-      <div class="list-row">
-        <div class="list-row-left">
-          <div class="list-row-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#bell"/></svg>
-          </div>
-          <div class="list-row-text">
-            <span class="list-row-header">Notifications</span>
-            <span class="list-row-subtitle">Manage alert preferences</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <h3 style="font-size: var(--text-body-small); color: var(--text-secondary); font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.05em; margin-top: var(--space-600);">No icon, with right text and chevron</h3>
+    <p class="variant-label" style="margin-top: var(--space-600);">.list-row — no icon, with right text + chevron</p>
     <div class="list-row-container">
       <div class="list-row">
         <div class="list-row-left">
@@ -1261,53 +1275,6 @@
           <div class="list-row-right-text">
             <span class="list-row-right-primary">$9.99/mo</span>
           </div>
-          <svg class="list-row-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#chevron-right"/></svg>
-        </div>
-      </div>
-      <div class="list-row">
-        <div class="list-row-left">
-          <div class="list-row-text">
-            <span class="list-row-header">Storage</span>
-            <span class="list-row-subtitle">Cloud backup</span>
-          </div>
-        </div>
-        <div class="list-row-right">
-          <div class="list-row-right-text">
-            <span class="list-row-right-primary">24 GB</span>
-            <span class="list-row-right-secondary">of 50 GB</span>
-          </div>
-          <svg class="list-row-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#chevron-right"/></svg>
-        </div>
-      </div>
-    </div>
-
-    <h3 style="font-size: var(--text-body-small); color: var(--text-secondary); font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.05em; margin-top: var(--space-600);">With image avatar</h3>
-    <div class="list-row-container">
-      <div class="list-row">
-        <div class="list-row-left">
-          <div class="list-row-icon">
-            <img src="https://i.pravatar.cc/80?img=12" alt="Avatar">
-          </div>
-          <div class="list-row-text">
-            <span class="list-row-header">Sarah Connor</span>
-            <span class="list-row-subtitle">Online</span>
-          </div>
-        </div>
-        <div class="list-row-right">
-          <svg class="list-row-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#chevron-right"/></svg>
-        </div>
-      </div>
-      <div class="list-row">
-        <div class="list-row-left">
-          <div class="list-row-icon">
-            <img src="https://i.pravatar.cc/80?img=33" alt="Avatar">
-          </div>
-          <div class="list-row-text">
-            <span class="list-row-header">John Doe</span>
-            <span class="list-row-subtitle">Away</span>
-          </div>
-        </div>
-        <div class="list-row-right">
           <svg class="list-row-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#chevron-right"/></svg>
         </div>
       </div>
@@ -1650,39 +1617,6 @@
         Marketing
       </button>
       <button class="tag-toggle off">Sales</button>
-    </div>
-  </section>
-
-  <div class="section-divider">
-    <h2>Avatar Block <code>{.avatar-block}</code></h2>
-    <p>Avatar paired with title and description text</p>
-  </div>
-  <section class="ds-page-section gap-sm" style="align-items: flex-start;">
-    <p class="variant-label">.avatar-block — with circle avatar</p>
-    <div class="avatar-block">
-      <div class="avatar"><img src="https://i.pravatar.cc/40?img=12" alt="User avatar"></div>
-      <div class="avatar-block-info">
-        <span class="avatar-block-title">Sarah Chen</span>
-        <span class="avatar-block-description">Product Designer</span>
-      </div>
-    </div>
-
-    <p class="variant-label" style="margin-top: var(--space-600);">.avatar-block — with square avatar</p>
-    <div class="avatar-block">
-      <div class="avatar avatar-square"><img src="https://i.pravatar.cc/40?img=33" alt="User avatar"></div>
-      <div class="avatar-block-info">
-        <span class="avatar-block-title">Alex Rivera</span>
-        <span class="avatar-block-description">Engineering Lead</span>
-      </div>
-    </div>
-
-    <p class="variant-label" style="margin-top: var(--space-600);">.avatar-block — with initial avatar</p>
-    <div class="avatar-block">
-      <div class="avatar avatar-initial">JD</div>
-      <div class="avatar-block-info">
-        <span class="avatar-block-title">Jordan Davis</span>
-        <span class="avatar-block-description">Marketing Manager</span>
-      </div>
     </div>
   </section>
 

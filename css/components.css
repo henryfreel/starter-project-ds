@@ -1763,6 +1763,17 @@ body.overlay-open {
   object-fit: cover;
 }
 
+.list-row-icon.icon-only {
+  width: 24px;
+  height: 24px;
+  background: none;
+  border-radius: 0;
+}
+
+.list-row-icon.image {
+  background-color: var(--bg-secondary);
+}
+
 .list-row-text {
   display: flex;
   flex-direction: column;
@@ -2409,41 +2420,6 @@ body.overlay-open {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-200);
-}
-
-/* ========================================
-   Avatar Block
-   ======================================== */
-
-.avatar-block {
-  display: flex;
-  align-items: center;
-  gap: var(--space-300);
-  font-family: var(--font-sans);
-}
-
-.avatar-block .avatar {
-  flex-shrink: 0;
-}
-
-.avatar-block-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.avatar-block-title {
-  font-size: var(--text-body);
-  font-weight: var(--weight-semibold);
-  color: var(--text-secondary);
-  line-height: 1.4;
-}
-
-.avatar-block-description {
-  font-size: var(--text-body);
-  font-weight: var(--weight-regular);
-  color: var(--text-tertiary);
-  line-height: 1.4;
 }
 
 /* ========================================

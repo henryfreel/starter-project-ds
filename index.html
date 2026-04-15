@@ -1102,6 +1102,60 @@
   </div>
 
   <div class="section-divider">
+    <h2>Modal <code>{.modal-overlay}</code></h2>
+    <p>Top-aligned overlay with fixed header, scrollable body, and optional footer</p>
+  </div>
+  <section class="ds-page-section gap-sm">
+    <button class="btn btn-brand" id="open-modal">Open Modal</button>
+  </section>
+  <div class="modal-overlay" id="demo-modal">
+    <div class="modal-container">
+      <div class="panel-header">
+        <h3 class="panel-title">Modal Title</h3>
+        <button class="panel-dismiss" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>This is a modal component with a fixed header, scrollable body, and a fixed footer. The overlay uses a blanket background that blocks interaction with the content below.</p>
+        <p>Modals are ideal for focused tasks that require the user's full attention — editing a record, reviewing details, completing a multi-step form, or confirming a destructive action.</p>
+        <p>The body area scrolls independently when content exceeds the available viewport height, while the header and footer remain pinned in place. This ensures the title and primary actions are always accessible.</p>
+        <p>On mobile viewports (768px and below), the modal expands to fill the entire screen, providing a native app-like experience. The header and footer remain fixed, and the body continues to scroll.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida.</p>
+      </div>
+      <div class="panel-footer">
+        <button class="btn btn-neutral" id="close-modal-cancel">Cancel</button>
+        <button class="btn btn-brand" id="close-modal-save">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider">
+    <h2>Blade <code>{.blade-overlay}</code></h2>
+    <p>Side panel fixed to the right edge with transparent scrim overlay</p>
+  </div>
+  <section class="ds-page-section gap-sm">
+    <button class="btn btn-brand" id="open-blade">Open Blade</button>
+  </section>
+  <div class="blade-overlay" id="demo-blade">
+    <div class="blade-container">
+      <div class="panel-header">
+        <h3 class="panel-title">Blade Panel</h3>
+        <button class="panel-dismiss" aria-label="Close">&times;</button>
+      </div>
+      <div class="blade-body">
+        <p>This is a blade component — a side panel that slides in from the right edge of the viewport. The transparent scrim allows the underlying page content to remain visible while preventing interaction.</p>
+        <p>Blades are well suited for supplementary content that relates to the current view: detail panes, settings panels, filters, or contextual editing forms. They keep the user oriented within the page while surfacing additional information.</p>
+        <p>Like the modal, the blade uses a shared panel header with a title and dismiss button. The body scrolls independently when content overflows.</p>
+        <p>On mobile viewports, the blade expands to full screen — effectively identical to the modal's mobile behavior — providing a consistent experience across form factors.</p>
+        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum.</p>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec posuere vulputate arcu. Phasellus accumsan cursus velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+        <p>Fusce sagittis, libero non molestie mollis, magna orci ullamcorper dolor, at vulputate neque nulla lacinia eros. Sed id ligula quis est convallis tempor. Curabitur lacinia pulvinar nibh. Nam a sapien.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider">
     <h2>Pagination <code>{.pagination}</code></h2>
     <p>Page navigation controls</p>
   </div>

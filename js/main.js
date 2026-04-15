@@ -67,6 +67,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Modal
+  const modalOverlay = document.getElementById('demo-modal');
+  const openModalBtn = document.getElementById('open-modal');
+  const closeModalBtns = [
+    document.getElementById('close-modal-cancel'),
+    document.getElementById('close-modal-save'),
+    modalOverlay ? modalOverlay.querySelector('.panel-dismiss') : null
+  ].filter(Boolean);
+
+  if (openModalBtn && modalOverlay) {
+    openModalBtn.addEventListener('click', () => modalOverlay.classList.add('open'));
+    closeModalBtns.forEach(btn => btn.addEventListener('click', () => modalOverlay.classList.remove('open')));
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) modalOverlay.classList.remove('open');
+    });
+  }
+
+  // Blade
+  const bladeOverlay = document.getElementById('demo-blade');
+  const openBladeBtn = document.getElementById('open-blade');
+  const closeBladeBtns = [
+    bladeOverlay ? bladeOverlay.querySelector('.panel-dismiss') : null
+  ].filter(Boolean);
+
+  if (openBladeBtn && bladeOverlay) {
+    openBladeBtn.addEventListener('click', () => bladeOverlay.classList.add('open'));
+    closeBladeBtns.forEach(btn => btn.addEventListener('click', () => bladeOverlay.classList.remove('open')));
+    bladeOverlay.addEventListener('click', (e) => {
+      if (e.target === bladeOverlay) bladeOverlay.classList.remove('open');
+    });
+  }
+
   // Notification dismiss
   document.querySelectorAll('.notification-dismiss').forEach(btn => {
     btn.addEventListener('click', () => {

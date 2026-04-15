@@ -1426,6 +1426,182 @@
 }
 
 /* ========================================
+   Panel Header & Footer (shared)
+   ======================================== */
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-400) var(--space-600);
+  border-bottom: var(--stroke-border) solid var(--border-default);
+  flex-shrink: 0;
+}
+
+.panel-header .panel-title {
+  font-family: var(--font-sans);
+  font-size: var(--text-heading);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-tight);
+  color: var(--text-default);
+  margin: 0;
+}
+
+.panel-header .panel-dismiss {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: var(--space-200);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-size: 20px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.panel-header .panel-dismiss:hover {
+  background-color: var(--bg-secondary);
+  color: var(--text-default);
+}
+
+.panel-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-400);
+  padding: var(--space-400) var(--space-600);
+  border-top: var(--stroke-border) solid var(--border-default);
+  flex-shrink: 0;
+}
+
+/* ========================================
+   Modal
+   ======================================== */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: var(--bg-blanket);
+  z-index: 1100;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  padding: 40px 24px;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-container {
+  background-color: var(--bg-default);
+  border: var(--stroke-border) solid var(--border-default);
+  border-radius: var(--radius-200);
+  max-width: 640px;
+  width: 100%;
+  max-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-600);
+  font-family: var(--font-sans);
+  transform: translateY(-20px);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.modal-overlay.open .modal-container {
+  transform: translateY(0);
+}
+
+.modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-600);
+  color: var(--text-default);
+  font-size: var(--text-body);
+  line-height: var(--leading-normal);
+}
+
+.modal-body p {
+  margin-bottom: var(--space-400);
+}
+
+.modal-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================================
+   Blade
+   ======================================== */
+
+.blade-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  background: var(--bg-scrim);
+  z-index: 1100;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.blade-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.blade-container {
+  background-color: var(--bg-default);
+  border-left: var(--stroke-border) solid var(--border-default);
+  width: 420px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-600);
+  font-family: var(--font-sans);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.blade-overlay.open .blade-container {
+  transform: translateX(0);
+}
+
+.blade-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-600);
+  color: var(--text-default);
+  font-size: var(--text-body);
+  line-height: var(--leading-normal);
+}
+
+.blade-body p {
+  margin-bottom: var(--space-400);
+}
+
+.blade-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================================
    Pagination
    ======================================== */
 
@@ -1942,6 +2118,25 @@
 
   .dialog-body {
     padding: var(--space-600);
+  }
+
+  .modal-overlay {
+    padding: 0;
+  }
+
+  .modal-container {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border: none;
+  }
+
+  .blade-container {
+    width: 100%;
+    border-left: none;
+    border-radius: 0;
   }
 
   .ds-tabs {

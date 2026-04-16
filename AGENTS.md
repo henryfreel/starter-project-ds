@@ -21,7 +21,7 @@ This design system is consumed via CDN by other projects. The web project templa
 | `index.html` | Single-page component showcase. Contains every component example with labels. Has a sidebar nav with scroll-spy and a hamburger menu on mobile. |
 | `js/main.js` | Interactive behavior (theme toggle, overlays, accordion, tabs, scroll-spy, custom selects, hamburger menu, etc.). |
 | `icons/` | Individual SVG files for all Feather icons (24x24 viewBox). |
-| `icons.svg` | Combined SVG sprite sheet. Referenced via `<use href="icons.svg#icon-name">`. |
+| `icons.svg` | Combined SVG sprite sheet. Auto-injected into the DOM by `main.js`; reference icons via `<use href="#icon-name">`. |
 | `netlify.toml` | Netlify deploy config with CORS (`Access-Control-Allow-Origin: *`) and caching headers for CDN usage. |
 | `starter/index.html` | Minimal template showing how to consume the design system via CDN. |
 
@@ -66,7 +66,7 @@ Header (`.ds-header`), Hero (`.ds-hero`), Panel (`.ds-panel`), Card Grid (`.ds-c
 - **Accordion:** `.ds-accordion`, `.accordion-item`
 
 ### Icons
-Full Feather icon set. Use via SVG sprite: `<use href="icons.svg#icon-name">`.
+Full Feather icon set. `main.js` auto-injects the sprite into the DOM, so use local refs: `<use href="#icon-name">`.
 
 ### Examples
 Full-page compositions: Page Newsletter, Page Product, Page Product Results, AI Chatbot.
@@ -281,11 +281,13 @@ Other projects consume this design system via CDN links:
 <script src="https://starter-project-ds.netlify.app/js/main.js"></script>
 ```
 
-Icons via SVG sprite:
+Icons via SVG sprite (the sprite is auto-injected into the DOM by `main.js`):
 ```html
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <use href="https://starter-project-ds.netlify.app/icons.svg#heart"></use>
+  <use href="#heart"></use>
 </svg>
 ```
+
+**Important:** `main.js` fetches `icons.svg` from the CDN and injects it into the page DOM on load. This means consumers use local fragment references (`<use href="#heart">`) instead of cross-origin URLs. External `<use href="https://...icons.svg#name">` is blocked by browsers as a fundamental SVG security restriction — not a CORS issue. Always use `#icon-name` syntax and ensure `main.js` is loaded.
 
 The `netlify.toml` file configures CORS headers (`Access-Control-Allow-Origin: *`) so these assets can be loaded from any domain. Changes pushed to main auto-deploy and immediately affect all consuming projects.

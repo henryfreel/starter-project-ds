@@ -6,13 +6,16 @@ A static HTML/CSS component library based on a Figma design system, deployed via
 
 ```
 ├── index.html              # Component showcase page
+├── starter/index.html      # Minimal template for consuming the DS via CDN
 ├── css/
 │   ├── reset.css           # CSS reset / normalize
 │   ├── tokens.css          # Design tokens (colors, spacing, typography)
 │   ├── components.css      # All component styles
 │   └── styles.css          # Global styles + Inter font import
 ├── js/
-│   └── main.js             # Accordion toggle + interactive behavior
+│   └── main.js             # Interactive behavior + SVG icon sprite loader
+├── icons.svg               # Combined SVG sprite sheet (all icons)
+├── icons/                  # Individual SVG files (287 Feather icons)
 ├── assets/
 │   ├── images/             # Image files
 │   └── fonts/              # Custom font files
@@ -47,6 +50,29 @@ A static HTML/CSS component library based on a Figma design system, deployed via
 ### Page Sections
 - **Page Accordion** — FAQ-style expandable items
 - **Page Newsletter** — Heading + newsletter form
+
+## Icons
+
+287 Feather icons are available via an SVG sprite sheet. `main.js` automatically fetches `icons.svg` and injects it into the page DOM, so icons work cross-origin for all consumers.
+
+Use local fragment references — **not** full CDN URLs:
+
+```html
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <use href="#heart"></use>
+</svg>
+```
+
+Change `width` and `height` to render at any size (16, 20, 24, 32, 48). The `viewBox` always stays `0 0 24 24`.
+
+You can also use individual SVG files directly (fixed at 24px):
+
+```html
+<img src="https://starter-project-ds.netlify.app/icons/heart.svg" alt="heart">
+```
+
+> **Note:** `<use href="https://...icons.svg#name">` pointing to an external origin is blocked by all browsers as a fundamental SVG security restriction. Always use `<use href="#name">` and ensure `main.js` is loaded.
 
 ## Design Tokens
 

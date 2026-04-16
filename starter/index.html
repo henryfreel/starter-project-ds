@@ -85,10 +85,10 @@
     <span class="tag secondary">Secondary Tag</span>
   </section>
 
-  <!-- Icons: use the SVG sprite from the CDN at any size via width/height -->
+  <!-- Icons: main.js auto-injects the SVG sprite into the DOM, so use local #id refs -->
   <!--
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <use href="https://starter-project-ds.netlify.app/icons.svg#heart"></use>
+      <use href="#heart"></use>
     </svg>
 
     viewBox always stays "0 0 24 24" — change width/height for different sizes:

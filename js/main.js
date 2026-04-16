@@ -1,3 +1,35 @@
+// Fetch the SVG icon sprite and inject it into the DOM so that
+// <use href="#icon-name"> works cross-origin for all DS consumers.
+// Without this, external <use href="https://...icons.svg#name"> is
+// blocked by browsers as a fundamental SVG security restriction.
+(function() {
+  var script = document.currentScript;
+  var baseUrl = '';
+
+  if (script && script.src) {
+    baseUrl = script.src.replace(/\/js\/main\.js(\?.*)?$/, '');
+  }
+
+  var spriteUrl = baseUrl + '/icons.svg';
+
+  fetch(spriteUrl)
+    .then(function(r) { return r.ok ? r.text() : Promise.reject(); })
+    .then(function(svgText) {
+      function inject() {
+        if (document.getElementById('ds-icon-sprite')) return;
+        var div = document.createElement('div');
+        div.id = 'ds-icon-sprite';
+        div.setAttribute('aria-hidden', 'true');
+        div.style.cssText = 'position:absolute;width:0;height:0;overflow:hidden';
+        div.innerHTML = svgText;
+        document.body.insertBefore(div, document.body.firstChild);
+      }
+      if (document.body) inject();
+      else document.addEventListener('DOMContentLoaded', inject);
+    })
+    .catch(function() {});
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // Theme toggle
@@ -243,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
         svg.setAttribute('stroke-linecap', 'round');
         svg.setAttribute('stroke-linejoin', 'round');
         const use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
-        use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', 'icons.svg#check');
+        use.setAttribute('href', '#check');
         svg.appendChild(use);
         item.appendChild(svg);
 

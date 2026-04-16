@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function closeOverlay(el) {
     el.classList.remove('open');
-    if (!document.querySelector('.dialog-overlay.open, .modal-overlay.open, .blade-overlay.open')) {
+    if (!document.querySelector('.dialog-overlay.open, .modal-overlay.open, .blade-overlay.open, .sheet-overlay.open')) {
       document.body.classList.remove('overlay-open');
     }
   }
@@ -147,6 +147,25 @@ document.addEventListener('DOMContentLoaded', () => {
     closeBladeBtns.forEach(btn => btn.addEventListener('click', () => closeOverlay(bladeOverlay)));
     bladeOverlay.addEventListener('click', (e) => {
       if (e.target === bladeOverlay) closeOverlay(bladeOverlay);
+    });
+  }
+
+  // Sheet
+  const sheetOverlay = document.getElementById('demo-sheet');
+  const openSheetBtn = document.getElementById('open-sheet');
+  const closeSheetBtns = [
+    document.getElementById('close-sheet-cancel'),
+    document.getElementById('close-sheet-save'),
+    sheetOverlay ? sheetOverlay.querySelector('.panel-dismiss') : null
+  ].filter(Boolean);
+
+  if (openSheetBtn && sheetOverlay) {
+    openSheetBtn.addEventListener('click', () => openOverlay(sheetOverlay));
+  }
+  if (sheetOverlay) {
+    closeSheetBtns.forEach(btn => btn.addEventListener('click', () => closeOverlay(sheetOverlay)));
+    sheetOverlay.addEventListener('click', (e) => {
+      if (e.target === sheetOverlay) closeOverlay(sheetOverlay);
     });
   }
 

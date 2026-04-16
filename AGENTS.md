@@ -52,7 +52,8 @@ Header (`.ds-header`), Hero (`.ds-hero`), Panel (`.ds-panel`), Card Grid (`.ds-c
 - **Notifications:** `.notification` (`.alert`, `.positive`, `.warning`)
 - **Dialog:** `.dialog-overlay`, `.dialog`
 - **Modal:** `.modal-overlay`, `.modal`
-- **Blade:** `.blade-overlay`, `.blade`
+- **Blade:** `.blade-overlay`, `.blade-container`
+- **Sheet:** `.sheet-overlay`, `.sheet-container` (full-screen overlay)
 - **List Row:** `.list-row` (with `.list-row-left`, `.list-row-text`, `.list-row-title`, `.list-row-subtitle`)
 - **Table:** `.ds-table`, `.ds-table-header`, `.ds-table-section`
 - **Checkbox:** `.checkbox-field`

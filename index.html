@@ -72,6 +72,7 @@
           <a class="menu-item" href="#dialog">Dialog</a>
           <a class="menu-item" href="#modal">Modal</a>
           <a class="menu-item" href="#blade">Blade</a>
+          <a class="menu-item" href="#sheet">Sheet</a>
           <a class="menu-item" href="#list-row">List Row</a>
           <a class="menu-item" href="#table">Table</a>
           <a class="menu-item" href="#checkbox-field">Checkbox</a>
@@ -1211,7 +1212,7 @@
     <div class="modal-container">
       <div class="panel-header">
         <h3 class="panel-title">Modal Title</h3>
-        <button class="panel-dismiss" aria-label="Close">&times;</button>
+        <button class="btn-icon btn-subtle panel-dismiss" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#x"/></svg></button>
       </div>
       <div class="modal-body">
         <p>This is a modal component with a fixed header, scrollable body, and a fixed footer. The overlay uses a blanket background that blocks interaction with the content below.</p>
@@ -1240,7 +1241,7 @@
     <div class="blade-container">
       <div class="panel-header">
         <h3 class="panel-title">Blade Panel</h3>
-        <button class="panel-dismiss" aria-label="Close">&times;</button>
+        <button class="btn-icon btn-subtle panel-dismiss" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#x"/></svg></button>
       </div>
       <div class="blade-body">
         <p>This is a blade component — a side panel that slides in from the right edge of the viewport. The transparent scrim allows the underlying page content to remain visible while preventing interaction.</p>
@@ -1250,6 +1251,34 @@
         <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum.</p>
         <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec posuere vulputate arcu. Phasellus accumsan cursus velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
         <p>Fusce sagittis, libero non molestie mollis, magna orci ullamcorper dolor, at vulputate neque nulla lacinia eros. Sed id ligula quis est convallis tempor. Curabitur lacinia pulvinar nibh. Nam a sapien.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider" id="sheet">
+    <h2>Sheet <code class="ref-class">{.sheet-overlay}</code></h2>
+    <p>Full-screen overlay with fixed header, scrollable body, and optional footer</p>
+  </div>
+  <section class="ds-page-section gap-sm">
+    <button class="btn btn-brand" id="open-sheet">Open Sheet</button>
+  </section>
+  <div class="sheet-overlay" id="demo-sheet">
+    <div class="sheet-container">
+      <div class="panel-header">
+        <h3 class="panel-title">Sheet Title</h3>
+        <button class="btn-icon btn-subtle panel-dismiss" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="icons.svg#x"/></svg></button>
+      </div>
+      <div class="sheet-body">
+        <p>This is a sheet component — a full-screen overlay that takes over the entire viewport. Like the modal, it uses a blanket background that blocks interaction with the content below.</p>
+        <p>Sheets are ideal for immersive tasks that benefit from maximum screen real estate: complex forms, multi-step workflows, document editing, or any experience that should feel like a dedicated view rather than a floating panel.</p>
+        <p>The sheet uses the same shared panel header and footer as the modal and blade. The body scrolls independently when content overflows, while the header and footer remain pinned.</p>
+        <p>On all viewport sizes, including mobile, the sheet fills the entire screen — making it consistent across breakpoints. This is the key difference from modals (centered with max-width) and blades (side-anchored with fixed width).</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="panel-footer">
+        <button class="btn btn-neutral" id="close-sheet-cancel">Cancel</button>
+        <button class="btn btn-brand" id="close-sheet-save">Save</button>
       </div>
     </div>
   </div>

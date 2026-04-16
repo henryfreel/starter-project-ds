@@ -1640,7 +1640,7 @@ body.overlay-open {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--space-400) var(--space-600);
+  padding: var(--space-600);
   border-bottom: var(--stroke-border) solid var(--border-default);
   flex-shrink: 0;
 }
@@ -1649,32 +1649,10 @@ body.overlay-open {
   font-family: var(--font-sans);
   font-size: var(--text-heading);
   font-weight: var(--weight-semibold);
-  line-height: var(--leading-tight);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
   color: var(--text-default);
   margin: 0;
-}
-
-.panel-header .panel-dismiss {
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: var(--space-200);
-  border-radius: var(--radius-full);
-  color: var(--text-secondary);
-  width: 20px;
-  height: 20px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-size: 20px;
-  line-height: 1;
-  flex-shrink: 0;
-}
-
-.panel-header .panel-dismiss:hover {
-  background-color: var(--bg-secondary);
-  color: var(--text-default);
 }
 
 .panel-footer {
@@ -1682,7 +1660,7 @@ body.overlay-open {
   align-items: center;
   justify-content: flex-end;
   gap: var(--space-400);
-  padding: var(--space-400) var(--space-600);
+  padding: var(--space-600);
   border-top: var(--stroke-border) solid var(--border-default);
   flex-shrink: 0;
 }
@@ -1776,7 +1754,8 @@ body.overlay-open {
 .blade-container {
   background-color: var(--bg-default);
   border-left: var(--stroke-border) solid var(--border-default);
-  width: 420px;
+  width: 640px;
+  max-width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1805,6 +1784,55 @@ body.overlay-open {
 }
 
 .blade-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================================
+   Sheet
+   ======================================== */
+
+.sheet-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  background: var(--bg-blanket);
+  z-index: 1100;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.sheet-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sheet-container {
+  background-color: var(--bg-default);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-sans);
+  overflow: hidden;
+}
+
+.sheet-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-600);
+  color: var(--text-default);
+  font-size: var(--text-body);
+  line-height: var(--leading-normal);
+}
+
+.sheet-body p {
+  margin-bottom: var(--space-400);
+}
+
+.sheet-body p:last-child {
   margin-bottom: 0;
 }
 

@@ -83,6 +83,16 @@ All design tokens are defined as CSS custom properties in `css/tokens.css`. Upda
 - Typography (Inter font, sizes, weights)
 - Border radius and stroke
 
+## Changelog
+
+A machine-readable changelog is published at:
+
+```
+https://starter-project-ds.netlify.app/changelog.json
+```
+
+It lists every version with breaking changes (markup that consumers need to update) and additions (new components). Consuming projects can fetch this to detect when their DS-dependent markup is stale.
+
 ## Local Development
 
 Open `index.html` directly in a browser, or use a local server:

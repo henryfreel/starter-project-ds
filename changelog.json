@@ -1,0 +1,71 @@
+{
+  "version": "1.2.0",
+  "lastUpdated": "2026-04-16",
+  "changes": [
+    {
+      "version": "1.2.0",
+      "date": "2026-04-16",
+      "summary": "Panel redesign, new Sheet component, blade width update",
+      "breaking": [
+        {
+          "component": "panel-header",
+          "description": "Dismiss button now uses .btn-icon.btn-subtle with SVG x icon instead of plain text ×. Padding changed from --space-400/--space-600 to --space-600 all around.",
+          "migration": "Replace <button class=\"panel-dismiss\" aria-label=\"Close\">&times;</button> with <button class=\"btn-icon btn-subtle panel-dismiss\" aria-label=\"Close\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><use href=\"#x\"/></svg></button>"
+        },
+        {
+          "component": "blade-container",
+          "description": "Blade width changed from 420px to 640px.",
+          "migration": "No markup changes needed — CSS-only update. Visual width of blades will increase."
+        }
+      ],
+      "added": [
+        {
+          "component": "sheet",
+          "description": "New full-screen overlay component (.sheet-overlay, .sheet-container, .sheet-body). Takes over the entire viewport with pinned header/footer and scrollable body. Uses shared .panel-header and .panel-footer."
+        }
+      ]
+    },
+    {
+      "version": "1.1.1",
+      "date": "2026-04-16",
+      "summary": "Overlay close handlers work independently of open triggers",
+      "breaking": [],
+      "added": [
+        {
+          "component": "dialog, modal, blade",
+          "description": "Close handlers (dismiss button + scrim click) now bind whenever the overlay element exists, even if the DS demo open button is not on the page. Consumers opening overlays from their own JS get close behavior automatically."
+        }
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-04-16",
+      "summary": "Fix cross-origin SVG sprite icons, portal select popovers",
+      "breaking": [
+        {
+          "component": "icons",
+          "description": "SVG sprite icons must now use local fragment references (<use href=\"#icon-name\">) instead of full CDN URLs. main.js auto-injects the sprite into the DOM. External <use href=\"https://...icons.svg#name\"> is blocked by browsers as a cross-origin SVG security restriction.",
+          "migration": "Replace <use href=\"https://starter-project-ds.netlify.app/icons.svg#heart\"></use> with <use href=\"#heart\"></use>. Ensure main.js is loaded via <script src=\"https://starter-project-ds.netlify.app/js/main.js\"></script>."
+        }
+      ],
+      "added": [
+        {
+          "component": "select-field",
+          "description": "Select popovers now portal to document.body when open, so they render correctly inside overflow containers (modals, blades, etc.). No markup changes needed."
+        }
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "date": "2026-04-15",
+      "summary": "Initial design system release",
+      "breaking": [],
+      "added": [
+        {
+          "component": "all",
+          "description": "Initial release with all foundation tokens, layout components, and UI components. See index.html for the full component showcase."
+        }
+      ]
+    }
+  ]
+}

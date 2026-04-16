@@ -22,6 +22,7 @@ This design system is consumed via CDN by other projects. The web project templa
 | `js/main.js` | Interactive behavior (theme toggle, overlays, accordion, tabs, scroll-spy, custom selects, hamburger menu, etc.). |
 | `icons/` | Individual SVG files for all Feather icons (24x24 viewBox). |
 | `icons.svg` | Combined SVG sprite sheet. Auto-injected into the DOM by `main.js`; reference icons via `<use href="#icon-name">`. |
+| `changelog.json` | Versioned changelog of DS updates. Consuming projects fetch this to detect breaking changes. Update this file whenever shipping markup-breaking changes. |
 | `netlify.toml` | Netlify deploy config with CORS (`Access-Control-Allow-Origin: *`) and caching headers for CDN usage. |
 | `starter/index.html` | Minimal template showing how to consume the design system via CDN. |
 
@@ -292,3 +293,53 @@ Icons via SVG sprite (the sprite is auto-injected into the DOM by `main.js`):
 **Important:** `main.js` fetches `icons.svg` from the CDN and injects it into the page DOM on load. This means consumers use local fragment references (`<use href="#heart">`) instead of cross-origin URLs. External `<use href="https://...icons.svg#name">` is blocked by browsers as a fundamental SVG security restriction — not a CORS issue. Always use `#icon-name` syntax and ensure `main.js` is loaded.
 
 The `netlify.toml` file configures CORS headers (`Access-Control-Allow-Origin: *`) so these assets can be loaded from any domain. Changes pushed to main auto-deploy and immediately affect all consuming projects.
+
+## Changelog
+
+The DS publishes a machine-readable changelog at `https://starter-project-ds.netlify.app/changelog.json`. Consuming projects fetch this to detect breaking changes that require markup updates.
+
+**When to update `changelog.json`:** Every time you ship a change that could break existing consumer markup — renamed classes, changed HTML structure, removed components, changed default behavior, or new required attributes.
+
+**When NOT to update:** Pure CSS-only visual tweaks (color, spacing, shadow changes that don't require markup changes), bug fixes that don't change the API, or new components that don't affect existing markup.
+
+**How to update:**
+
+1. Bump the top-level `version` field (semver: major for removals, minor for additions/breaking markup, patch for fixes)
+2. Update `lastUpdated` to today's date
+3. Add a new entry at the **top** of the `changes` array with:
+   - `version` — the new version string
+   - `date` — ISO date string
+   - `summary` — one-line description
+   - `breaking` — array of objects with `component`, `description`, and `migration` (exact before/after markup)
+   - `added` — array of objects with `component` and `description`
+
+**Schema:**
+
+```json
+{
+  "version": "1.2.0",
+  "lastUpdated": "2026-04-16",
+  "changes": [
+    {
+      "version": "1.2.0",
+      "date": "2026-04-16",
+      "summary": "Short description of what changed",
+      "breaking": [
+        {
+          "component": "component-name",
+          "description": "What changed and why",
+          "migration": "Exact before → after markup"
+        }
+      ],
+      "added": [
+        {
+          "component": "component-name",
+          "description": "What was added"
+        }
+      ]
+    }
+  ]
+}
+```
+
+Consuming projects should track their last-applied DS version and check `changelog.json` for breaking changes newer than that version before modifying DS-dependent markup.

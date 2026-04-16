@@ -160,4 +160,50 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Sidebar scroll-spy
+  const sidebarLinks = document.querySelectorAll('.sidebar-nav .menu-item');
+  const sections = document.querySelectorAll('.section-divider[id]');
+
+  if (sidebarLinks.length && sections.length) {
+    const linkMap = {};
+    sidebarLinks.forEach(link => {
+      const id = link.getAttribute('href')?.replace('#', '');
+      if (id) linkMap[id] = link;
+    });
+
+    let currentActive = null;
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          if (linkMap[id]) {
+            if (currentActive) currentActive.classList.remove('active');
+            linkMap[id].classList.add('active');
+            currentActive = linkMap[id];
+
+            linkMap[id].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+          }
+        }
+      });
+    }, {
+      rootMargin: '-10% 0px -80% 0px',
+      threshold: 0
+    });
+
+    sections.forEach(section => observer.observe(section));
+
+    sidebarLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const id = link.getAttribute('href')?.replace('#', '');
+        const target = document.getElementById(id);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          history.replaceState(null, '', '#' + id);
+        }
+      });
+    });
+  }
 });

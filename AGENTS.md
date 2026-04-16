@@ -5,7 +5,7 @@
 This is a static HTML/CSS design system sourced from a Figma file. All components, tokens, and examples live in a single-page showcase (`index.html`) with styles split across CSS files. There is no build step — just static files served via Netlify.
 
 **Figma file key:** `cpFzRo9We3lWcBNjwvI6iN`
-**Live URL:** https://public-project-starter-web.netlify.app/
+**Live URL:** https://starter-project-ds.netlify.app/
 
 ## File Map
 

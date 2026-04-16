@@ -106,6 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (openBtn && dialogOverlay) {
     openBtn.addEventListener('click', () => openOverlay(dialogOverlay));
+  }
+  if (dialogOverlay) {
     closeBtns.forEach(btn => btn.addEventListener('click', () => closeOverlay(dialogOverlay)));
     dialogOverlay.addEventListener('click', (e) => {
       if (e.target === dialogOverlay) closeOverlay(dialogOverlay);
@@ -123,6 +125,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (openModalBtn && modalOverlay) {
     openModalBtn.addEventListener('click', () => openOverlay(modalOverlay));
+  }
+  if (modalOverlay) {
     closeModalBtns.forEach(btn => btn.addEventListener('click', () => closeOverlay(modalOverlay)));
     modalOverlay.addEventListener('click', (e) => {
       if (e.target === modalOverlay) closeOverlay(modalOverlay);
@@ -138,6 +142,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (openBladeBtn && bladeOverlay) {
     openBladeBtn.addEventListener('click', () => openOverlay(bladeOverlay));
+  }
+  if (bladeOverlay) {
     closeBladeBtns.forEach(btn => btn.addEventListener('click', () => closeOverlay(bladeOverlay)));
     bladeOverlay.addEventListener('click', (e) => {
       if (e.target === bladeOverlay) closeOverlay(bladeOverlay);
